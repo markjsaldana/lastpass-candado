@@ -1,0 +1,35 @@
+{
+  "weekOf": "2026-11-16",
+  "topForSales": [10, 12, 14],
+  "trends": [
+    {
+      "title": "Competitors lead with our incident history",
+      "detail": "1Password and Keeper both put LastPass's past incidents on their comparison pages. The security lead reads those pages before the first call, so reps need sourced answers ready on day one.",
+      "signals": [8, 10, 12]
+    },
+    {
+      "title": "Bitwarden competes on price and the path out",
+      "detail": "A price claim aimed at LastPass, a migration guide for LastPass Enterprise customers, and more mentions in small-company first calls. Expect it in renewals and in deals under 100 employees.",
+      "signals": [5, 7, 9]
+    },
+    {
+      "title": "MSP partners are getting 1Password's pitch",
+      "detail": "1Password's page claims a multi-tenancy edge, and two partners asked for a side-by-side in the same week.",
+      "signals": [11, 16]
+    }
+  ],
+  "winLossQuestions": [
+    {
+      "question": "When did your security lead first talk to someone from LastPass? Did that happen before the proposal?",
+      "gap": "Signal #8 suggests we lose when the security lead is reached late. Two losses aren't a pattern yet."
+    },
+    {
+      "question": "Which Bitwarden plan was your quote on, and did it include SSO?",
+      "gap": "We don't know if buyers compare our Business to Bitwarden Teams ($4) or Enterprise ($6). See Signal #7."
+    },
+    {
+      "question": "For MSP partners: what would make you add a second password manager to your stack?",
+      "gap": "No first-hand evidence yet on how Signal #11 plays with partners."
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "harbor-rollout",
+    "customerId": "harbor-pike",
+    "title": "Harbor & Pike CPAs rolls out to 130 staff in 9 days",
+    "visibility": "Public",
+    "useCases": [
+      "SSO rollout",
+      "Adoption"
+    ],
+    "challenge": "Tax season was eight weeks out. Staff kept client portal passwords in a shared spreadsheet, and the firm's cyber insurer asked for a password manager.",
+    "solution": "Connected Entra ID so accounts were created from the directory, set policies by team, and turned on federated login for partners first.",
+    "results": [
+      {
+        "value": "9 days",
+        "label": "From signed to everyone live"
+      },
+      {
+        "value": "96%",
+        "label": "Staff active after 30 days"
+      },
+      {
+        "value": "0",
+        "label": "Training sessions held"
+      }
+    ],
+    "quote": {
+      "text": "Our partners didn't need a class. It was in their browser on Monday and they used it.",
+      "role": "IT director"
+    }
+  },
+  {
+    "id": "cedar-switch",
+    "customerId": "cedar-valley",
+    "title": "Cedar Valley Health Billing moves off Bitwarden",
+    "visibility": "Public",
+    "useCases": [
+      "Adoption",
+      "Compliance & audit"
+    ],
+    "challenge": "IT liked Bitwarden, but front-office staff kept saving payer portal logins in spreadsheets, which failed an internal audit.",
+    "solution": "Moved 115 users over a weekend, shared folders by team, and set policies to block saving passwords in the browser.",
+    "results": [
+      {
+        "value": "-60%",
+        "label": "Password help desk tickets"
+      },
+      {
+        "value": "115",
+        "label": "Users moved in one weekend"
+      },
+      {
+        "value": "2 days",
+        "label": "To pass the follow-up audit"
+      }
+    ],
+    "quote": {
+      "text": "The cheaper tool cost us more, because half the office never used it.",
+      "role": "IT admin"
+    }
+  },
+  {
+    "id": "northgate-msp",
+    "customerId": "northgate-it",
+    "title": "Northgate IT runs 34 clients from one console",
+    "visibility": "Internal only",
+    "useCases": [
+      "MSP",
+      "Offboarding"
+    ],
+    "challenge": "Each client had its own admin login, and billing took a day each month.",
+    "solution": "Moved every client into the LastPass MSP console with template policies and a billing report by client.",
+    "results": [
+      {
+        "value": "34",
+        "label": "Clients in one console"
+      },
+      {
+        "value": "1 hour",
+        "label": "Monthly billing, down from a day"
+      },
+      {
+        "value": "+11",
+        "label": "Clients added this year"
+      }
+    ],
+    "quote": {
+      "text": "I stopped dreading the first of the month.",
+      "role": "Founder"
+    }
+  },
+  {
+    "id": "summit-offboarding",
+    "customerId": "summit-dental",
+    "title": "Summit Dental cuts offboarding from days to minutes",
+    "visibility": "Public",
+    "useCases": [
+      "Offboarding",
+      "SSO rollout"
+    ],
+    "challenge": "With 22 offices and steady turnover, former staff kept access to shared vendor logins for days.",
+    "solution": "Tied accounts to Okta. When someone leaves, their access to every shared login ends with the directory change.",
+    "results": [
+      {
+        "value": "Minutes",
+        "label": "To remove a leaver's access"
+      },
+      {
+        "value": "410",
+        "label": "Employees covered"
+      },
+      {
+        "value": "22",
+        "label": "Offices live"
+      }
+    ],
+    "quote": {
+      "text": "Offboarding used to be a checklist nobody finished. Now it's automatic.",
+      "role": "VP of operations"
+    }
+  },
+  {
+    "id": "prairie-security-review",
+    "customerId": "prairie-ag",
+    "title": "Prairie Ag's security review, start to finish",
+    "visibility": "Internal only",
+    "useCases": [
+      "Compliance & audit",
+      "SSO rollout"
+    ],
+    "challenge": "The security manager asked about the 2022 incident in the first meeting and sent a 140-question questionnaire.",
+    "solution": "The SE answered from LastPass's published security pages and incident posts, and shared the certification reports under NDA.",
+    "results": [
+      {
+        "value": "11 days",
+        "label": "Questionnaire to sign-off"
+      },
+      {
+        "value": "140",
+        "label": "Questions answered"
+      },
+      {
+        "value": "300",
+        "label": "Employees live"
+      }
+    ],
+    "quote": {
+      "text": "They didn't dodge the history. They showed me what changed and where it's written down.",
+      "role": "Security manager"
+    }
+  },
+  {
+    "id": "pacific-rim-sso",
+    "customerId": "pacific-rim-eng",
+    "title": "Pacific Rim Engineering adds SSO in a week",
+    "visibility": "Public",
+    "useCases": [
+      "SSO rollout",
+      "Directory sync"
+    ],
+    "challenge": "Engineers used a dozen tools with separate logins and no single place to turn off access.",
+    "solution": "Synced users from Google Workspace and added SSO to the three apps used most.",
+    "results": [
+      {
+        "value": "1 week",
+        "label": "To SSO on top apps"
+      },
+      {
+        "value": "160",
+        "label": "Users synced"
+      },
+      {
+        "value": "3",
+        "label": "Apps behind SSO first"
+      }
+    ],
+    "quote": {
+      "text": "IT stopped being the bottleneck for new hires.",
+      "role": "IT manager"
+    }
+  }
+]

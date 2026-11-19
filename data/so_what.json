@@ -1,0 +1,90 @@
+{
+  "weekOf": "2026-11-16",
+  "headline": "1Password and Keeper are selling against our past, and Bitwarden is selling against our price. The fix for both is getting to the security lead and the CFO earlier, with sourced answers.",
+  "audiences": [
+    {
+      "id": "leadership",
+      "label": "Leadership",
+      "who": "Sales, marketing, and product leaders",
+      "summary": "Two decisions this week, and one ask.",
+      "items": [
+        {
+          "title": "Move the security review earlier in the deal",
+          "detail": "Two losses this quarter where the security lead decided and we met them last. Both 1Password and Keeper now lead with our incident history on their comparison pages.",
+          "action": "Decision: make a security lead meeting, with the trust pack sent ahead, a required step before any proposal over 100 seats.",
+          "signals": [8, 10, 12]
+        },
+        {
+          "title": "Decide how we answer Bitwarden on price",
+          "detail": "Bitwarden's page compares its $6 Enterprise plan to our $7 Business plan. The numbers are right; the plans aren't the same.",
+          "action": "Decision: hold price and give reps a plan-for-plan comparison, or test a migration offer for deals where Bitwarden is in the quote.",
+          "signals": [7, 9]
+        },
+        {
+          "title": "Answer 1Password's MSP claim",
+          "detail": "1Password says it supports multi-tenancy and LastPass doesn't. Two MSP partners asked about it this week.",
+          "action": "Ask: one week of Product time to confirm exactly what our MSP console does, so the website and partner managers say the same thing.",
+          "signals": [11, 16]
+        }
+      ]
+    },
+    {
+      "id": "sdrs",
+      "label": "SDRs",
+      "who": "Outbound and inbound SDRs",
+      "summary": "Three reasons to reach out this week, with the opener for each.",
+      "items": [
+        {
+          "title": "Companies with 20 to 50 people on 1Password Teams",
+          "detail": "Teams Starter Pack tops out at 20 users. Past that, 1Password means Business at $8.99 per user.",
+          "action": "Opener: \"When you pass 20 people, 1Password moves you to its $8.99 plan. Worth 15 minutes to see what LastPass Business costs at your size?\"",
+          "signals": [14]
+        },
+        {
+          "title": "IT admins at companies under 100 people",
+          "detail": "Bitwarden comes up most here, usually through IT. Get to the business buyer early.",
+          "action": "Opener: \"Most teams your size compare us with Bitwarden. Happy to show both plans side by side, including where SSO lives.\"",
+          "signals": [5, 7]
+        },
+        {
+          "title": "MSPs that resell password management",
+          "detail": "1Password is pitching partners on multi-tenancy. Lead with the console.",
+          "action": "Opener: \"Want to see how partners run every client's LastPass from one dashboard, with billing by client?\"",
+          "signals": [11, 16]
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "label": "Team",
+      "who": "AEs, SEs, CS, marketing, and enablement",
+      "summary": "What changes in your work this week.",
+      "items": [
+        {
+          "title": "AEs and SEs: use the updated incident answer",
+          "detail": "Every battlecard now has the same incident-history answer, built only from what LastPass has published.",
+          "action": "Send the trust pack to the security lead after the first call. Don't paraphrase the incident posts. Link them.",
+          "signals": [10, 12]
+        },
+        {
+          "title": "CS: prepare renewal calls for Bitwarden",
+          "detail": "Bitwarden's migration guide makes leaving look easy. Price-sensitive customers will have read it.",
+          "action": "Open Q1 renewal calls with adoption and usage numbers. Log any Bitwarden mention in the CRM.",
+          "signals": [9]
+        },
+        {
+          "title": "Marketing: refresh our comparison pages",
+          "detail": "Two competitor pages changed how they talk about us. Prospects quote them.",
+          "action": "Update our 1Password and Bitwarden comparison pages with plan-for-plan pricing and links to our security pages. Legal review by Friday.",
+          "signals": [7, 10]
+        },
+        {
+          "title": "Enablement: 15 minutes on the security review",
+          "detail": "Reps need to practice the incident answer out loud, word for word from the card.",
+          "action": "Add a role-play of the incident question to Friday's sales huddle.",
+          "signals": [8, 10, 12]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "file": {
+    "name": "maplewood-evaluation-call.txt",
+    "path": "samples/transcripts/maplewood-evaluation-call.txt",
+    "source": "Call recorder export",
+    "duration": "44 min",
+    "speakers": 5
+  },
+  "prospect": {
+    "name": "Maplewood Accounting Group",
+    "industry": "Accounting",
+    "size": "50 to 249",
+    "region": "Midwest",
+    "personas": [
+      "Business buyer",
+      "IT admin",
+      "Security lead"
+    ],
+    "competitorId": "1password",
+    "stage": "Evaluation",
+    "nextStep": "Technical session Thursday"
+  },
+  "parsing": [
+    "Read 44 minutes, 5 speakers (3 from Maplewood)",
+    "Found 1Password in the deal, mentioned 3 times",
+    "Matched buyers: the CFO, the IT admin, and the security lead",
+    "Stage: Evaluation. Next step: technical session Thursday",
+    "Grouped 12 buyer statements into 3 concerns"
+  ],
+  "concerns": [
+    {
+      "concern": "The 2022 incident, and what's different now",
+      "quote": "I read about your 2022 breach, and that's the first thing my board will ask me about.",
+      "speaker": "Wes Carter, Security lead",
+      "at": "00:02:30",
+      "mentions": 4,
+      "objection": 0
+    },
+    {
+      "concern": "Rollout through Entra ID before tax season",
+      "quote": "If this takes more than two weeks to roll out, it doesn't happen before tax season.",
+      "speaker": "Ana Ruiz, IT admin",
+      "at": "00:04:05",
+      "mentions": 4
+    },
+    {
+      "concern": "Non-technical staff won't use it, and 1Password costs more",
+      "quote": "Half our staff still keep client portal passwords in a spreadsheet. If they won't use it, I'm paying for nothing.",
+      "speaker": "Tom Becker, CFO",
+      "at": "00:07:40",
+      "mentions": 4
+    }
+  ],
+  "resources": [
+    {
+      "kind": "objection",
+      "ref": "0",
+      "addresses": [
+        1
+      ],
+      "why": "The approved incident answer, with links to what LastPass has published. Send it to Wes before Thursday, word for word."
+    },
+    {
+      "kind": "reference",
+      "ref": "prairie-ag",
+      "addresses": [
+        1
+      ],
+      "why": "A security manager who asked about 2022 in the first meeting and signed off after an 11-day review. Peer to peer for Wes."
+    },
+    {
+      "kind": "caseStudy",
+      "ref": "harbor-rollout",
+      "addresses": [
+        2,
+        3
+      ],
+      "why": "Accounting firm, 130 staff, live in 9 days with Entra ID, 96% active in 30 days with no training. Answers Ana and Tom at once."
+    },
+    {
+      "kind": "reference",
+      "ref": "harbor-pike",
+      "addresses": [
+        2,
+        3
+      ],
+      "why": "Their IT director chose LastPass over 1Password and can talk Entra sync with Ana."
+    }
+  ],
+  "techQuestion": {
+    "ask": "Wes asked how SSO works with the master password. Can you give me one answer for Tom and one for Wes?",
+    "plain": {
+      "audience": "For Tom (CFO)",
+      "text": "Each person unlocks LastPass with a password only they know, and LastPass doesn't store it. Passwords are scrambled on the person's own laptop before anything is saved, so LastPass's servers hold only scrambled data. Business includes sign-in through your identity provider, like Microsoft. Our engineer will confirm in writing exactly how that fits your setup before Thursday."
+    },
+    "precise": {
+      "audience": "For Wes (security lead)",
+      "text": "Vault data is encrypted and decrypted on the device with AES-256. The key is derived from the master password with PBKDF2-SHA256 at 600,000 iterations, and one more iteration produces a separate value used for authentication. LastPass states the plaintext master password is not stored on its servers. Federated login is included on Business and Business Max."
+    },
+    "gap": "Not in the approved library: how federated login derives and stores the vault key. I won't guess. Sent to the SE team to answer from the LastPass technical whitepaper, and to PMM to add to the library.",
+    "sources": [
+      {
+        "label": "LastPass zero-knowledge security page",
+        "url": "https://www.lastpass.com/security/zero-knowledge-security"
+      },
+      {
+        "label": "LastPass pricing (federated login by plan)",
+        "url": "https://www.lastpass.com/pricing"
+      }
+    ]
+  },
+  "email": {
+    "to": "Tom Becker, Ana Ruiz, Wes Carter",
+    "subject": "Before Thursday: security answers and a 9-day rollout",
+    "paragraphs": [
+      {
+        "text": "Hi Tom, Ana, and Wes,"
+      },
+      {
+        "text": "Thanks for Monday. You raised three things, and I'd like to answer them before Thursday."
+      },
+      {
+        "text": "Wes, on the 2022 incident: I'll send LastPass's own posts on what happened and what changed since, plus our certification list, in a separate note you can forward to your board. Sam will answer how SSO and the master password work together, in writing, before the session."
+      },
+      {
+        "text": "Ana, on rollout: Harbor & Pike, a 130-person accounting firm, went live in 9 days by creating accounts from Entra ID.",
+        "resource": 3,
+        "linkText": "How Harbor & Pike rolled out"
+      },
+      {
+        "text": "Tom, on adoption: 96% of Harbor & Pike's staff were active after 30 days, with no training sessions. Their IT director is happy to talk with Ana. Want me to set that up?"
+      },
+      {
+        "text": "Thursday, Sam will walk through Entra sync and offboarding on a test account set up like yours."
+      }
+    ],
+    "signoff": "Jordan"
+  },
+  "form": {
+    "fields": [
+      {
+        "label": "Company",
+        "value": "Maplewood Accounting Group"
+      },
+      {
+        "label": "Industry · size",
+        "value": "Accounting · 120 employees"
+      },
+      {
+        "label": "Buyer",
+        "value": "CFO"
+      },
+      {
+        "label": "Competitor",
+        "value": "1Password"
+      },
+      {
+        "label": "Stage",
+        "value": "Evaluation"
+      },
+      {
+        "label": "Main concern",
+        "value": "Staff adoption and price"
+      }
+    ],
+    "concerns": [
+      3
+    ],
+    "resources": [
+      3,
+      4
+    ],
+    "missed": "The transcript of this call found 2 more concerns the form didn't: the 2022 incident, raised by the security lead, and rollout through Entra ID before tax season.",
+    "email": {
+      "to": "Tom Becker",
+      "subject": "How a 130-person accounting firm got everyone using LastPass",
+      "paragraphs": [
+        {
+          "text": "Hi Tom,"
+        },
+        {
+          "text": "Thanks for Monday. On whether staff will use it: Harbor & Pike, a 130-person accounting firm, had 96% of staff active after 30 days with no training sessions.",
+          "resource": 3,
+          "linkText": "How Harbor & Pike rolled out"
+        },
+        {
+          "text": "Their IT director chose LastPass over 1Password and is happy to talk. Want me to set up a call before Thursday?"
+        }
+      ],
+      "signoff": "Jordan"
+    }
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "codes": [
+    {
+      "id": "trust-history",
+      "label": "Incident history",
+      "group": "Trust"
+    },
+    {
+      "id": "security-late",
+      "label": "Security lead reached late",
+      "group": "Sales process"
+    },
+    {
+      "id": "price-per-user",
+      "label": "Price per user",
+      "group": "Price"
+    },
+    {
+      "id": "plan-mismatch",
+      "label": "Compared different plans",
+      "group": "Price"
+    },
+    {
+      "id": "adoption",
+      "label": "End-user ease of use",
+      "group": "Product"
+    },
+    {
+      "id": "sso-directory",
+      "label": "SSO and directory sync",
+      "group": "Rollout"
+    },
+    {
+      "id": "rollout-speed",
+      "label": "Time to roll out",
+      "group": "Rollout"
+    },
+    {
+      "id": "support",
+      "label": "Phone support",
+      "group": "Sales process"
+    },
+    {
+      "id": "open-source",
+      "label": "Open source or self-hosting",
+      "group": "Product"
+    },
+    {
+      "id": "msp-console",
+      "label": "Multi-client console",
+      "group": "Product"
+    }
+  ],
+  "interviews": [
+    {
+      "id": "wl-01",
+      "company": "Medical billing company",
+      "size": "50 to 249",
+      "industry": "Healthcare admin",
+      "competitorId": "1password",
+      "outcome": "Lost",
+      "role": "Security lead",
+      "daysAfter": 12,
+      "primaryReason": "trust-history",
+      "codes": [
+        "trust-history",
+        "security-late"
+      ],
+      "quote": "Nobody from LastPass talked to me until the proposal. By then I'd already decided.",
+      "action": "Proposal: security lead meeting before any proposal over 100 seats."
+    },
+    {
+      "id": "wl-02",
+      "company": "Regional law firm",
+      "size": "50 to 249",
+      "industry": "Legal",
+      "competitorId": "1password",
+      "outcome": "Won",
+      "role": "Managing partner",
+      "daysAfter": 9,
+      "primaryReason": "price-per-user",
+      "codes": [
+        "price-per-user",
+        "adoption"
+      ],
+      "quote": "Both were fine on security. LastPass was cheaper and the staff didn't need help.",
+      "action": "Price math added to the 1Password card."
+    },
+    {
+      "id": "wl-03",
+      "company": "Engineering firm",
+      "size": "50 to 249",
+      "industry": "Engineering",
+      "competitorId": "bitwarden",
+      "outcome": "Lost",
+      "role": "IT manager",
+      "daysAfter": 14,
+      "primaryReason": "open-source",
+      "codes": [
+        "open-source",
+        "price-per-user"
+      ],
+      "quote": "We wanted to host it ourselves. That decided it before price did.",
+      "action": "Qualify self-hosting in discovery. Added to the Bitwarden card."
+    },
+    {
+      "id": "wl-04",
+      "company": "Insurance agency",
+      "size": "Under 50",
+      "industry": "Insurance",
+      "competitorId": "bitwarden",
+      "outcome": "Won",
+      "role": "Office manager",
+      "daysAfter": 7,
+      "primaryReason": "adoption",
+      "codes": [
+        "adoption",
+        "support"
+      ],
+      "quote": "I needed something the front desk would use without calling me.",
+      "action": "Reference recruited for small offices."
+    },
+    {
+      "id": "wl-05",
+      "company": "Dental group",
+      "size": "250 to 500",
+      "industry": "Dental group",
+      "competitorId": "keeper",
+      "outcome": "Won",
+      "role": "VP of operations",
+      "daysAfter": 10,
+      "primaryReason": "sso-directory",
+      "codes": [
+        "sso-directory",
+        "rollout-speed"
+      ],
+      "quote": "Okta sync on day one, and we were live across all offices in two weeks.",
+      "action": "Case study approved."
+    },
+    {
+      "id": "wl-06",
+      "company": "Accounting firm",
+      "size": "50 to 249",
+      "industry": "Accounting",
+      "competitorId": "bitwarden",
+      "outcome": "Lost",
+      "role": "CFO",
+      "daysAfter": 11,
+      "primaryReason": "plan-mismatch",
+      "codes": [
+        "plan-mismatch",
+        "price-per-user"
+      ],
+      "quote": "Their quote was four dollars. I didn't know SSO wasn't on that plan until later.",
+      "action": "Landmine question on which Bitwarden plan the quote is for."
+    },
+    {
+      "id": "wl-07",
+      "company": "Managed service provider",
+      "size": "Under 50",
+      "industry": "MSP",
+      "competitorId": "1password",
+      "outcome": "Won",
+      "role": "Founder",
+      "daysAfter": 8,
+      "primaryReason": "msp-console",
+      "codes": [
+        "msp-console",
+        "support"
+      ],
+      "quote": "Billing by client was the thing. I bill 30 clients a month.",
+      "action": "Billing report added to the MSP demo script."
+    },
+    {
+      "id": "wl-08",
+      "company": "Manufacturer",
+      "size": "250 to 500",
+      "industry": "Manufacturing",
+      "competitorId": "1password",
+      "outcome": "Lost",
+      "role": "Security lead",
+      "daysAfter": 13,
+      "primaryReason": "trust-history",
+      "codes": [
+        "trust-history",
+        "security-late"
+      ],
+      "quote": "The answers were fine. They just came after my board had already asked.",
+      "action": "Trust pack sent after the first call, not after the questionnaire."
+    }
+  ]
+}

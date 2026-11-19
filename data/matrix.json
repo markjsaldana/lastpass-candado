@@ -1,0 +1,376 @@
+{
+  "players": [
+    {
+      "id": "lastpass",
+      "name": "LastPass"
+    },
+    {
+      "id": "1password",
+      "name": "1Password"
+    },
+    {
+      "id": "bitwarden",
+      "name": "Bitwarden"
+    },
+    {
+      "id": "keeper",
+      "name": "Keeper"
+    }
+  ],
+  "groups": [
+    {
+      "persona": "IT admin",
+      "capabilities": [
+        {
+          "name": "Directory sync and provisioning",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "AD, Entra ID, Google Workspace, OneLogin, Okta on Business and Business Max. Not on Teams.",
+              "url": "https://www.lastpass.com/pricing"
+            },
+            "1password": {
+              "mark": "yes",
+              "note": "Azure AD, Google Workspace, Okta, OneLogin, Rippling, JumpCloud",
+              "url": "https://1password.com/teams/pricing/"
+            },
+            "bitwarden": {
+              "mark": "yes",
+              "note": "SCIM and Directory Connector on Teams and Enterprise",
+              "url": "https://bitwarden.com/pricing/business/"
+            },
+            "keeper": {
+              "mark": "partial",
+              "note": "SCIM and AD/LDAP listed on Enterprise",
+              "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+            }
+          }
+        },
+        {
+          "name": "SSO with an identity provider",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "Federated login on Business and Business Max. Not on Teams.",
+              "url": "https://www.lastpass.com/pricing"
+            },
+            "1password": {
+              "mark": "yes",
+              "note": "Okta, Entra ID, OneLogin, Duo on Business",
+              "url": "https://1password.com/teams/pricing/"
+            },
+            "bitwarden": {
+              "mark": "partial",
+              "note": "Enterprise plan only, not Teams",
+              "url": "https://bitwarden.com/pricing/business/"
+            },
+            "keeper": {
+              "mark": "partial",
+              "note": "SSO (SAML) listed on Enterprise",
+              "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+            }
+          }
+        },
+        {
+          "name": "Admin security policies",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "25 on Teams, 100+ on Business",
+              "url": "https://www.lastpass.com/pricing"
+            },
+            "1password": {
+              "mark": "yes",
+              "note": "Custom policies listed on business plans",
+              "url": "https://1password.com/teams/pricing/"
+            },
+            "bitwarden": {
+              "mark": "partial",
+              "note": "Enterprise policies on Enterprise only",
+              "url": "https://bitwarden.com/pricing/business/"
+            },
+            "keeper": {
+              "mark": "yes",
+              "note": "Policy settings listed in the plan chart",
+              "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "persona": "Security lead",
+      "capabilities": [
+        {
+          "name": "Vault encrypted on the device",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "AES-256; key from PBKDF2-SHA256 at 600,000 iterations; decrypted on device",
+              "url": "https://www.lastpass.com/security/zero-knowledge-security"
+            },
+            "1password": {
+              "mark": "yes",
+              "note": "AES-256 with two-key derivation (password plus Secret Key)",
+              "url": "https://1password.com/teams/pricing/"
+            },
+            "bitwarden": {
+              "mark": "yes",
+              "note": "Says all vault data is end-to-end encrypted",
+              "url": "https://bitwarden.com/bitwarden-alternatives/"
+            },
+            "keeper": {
+              "mark": "yes",
+              "note": "Record-level AES-256 encryption, per Keeper",
+              "url": "https://www.keepersecurity.com/vs/lastpass.html"
+            }
+          }
+        },
+        {
+          "name": "Published certifications",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "ISO 27001, SOC 2 Type II, SOC 3, BSI C5, TRUSTe; ISO 27701 per its blog",
+              "url": "https://www.lastpass.com/security"
+            },
+            "1password": {
+              "mark": "yes",
+              "note": "SOC 2; ISO 27001, 27017, 27018, 27701",
+              "url": "https://1password.com/compare/1password-vs-lastpass"
+            },
+            "bitwarden": {
+              "mark": "partial",
+              "note": "Says it's third-party audited. Certification list not checked.",
+              "url": "https://bitwarden.com/bitwarden-alternatives/"
+            },
+            "keeper": {
+              "mark": "yes",
+              "note": "SOC 2, SOC 3, ISO 27001/27017/27018, FedRAMP High, GovRAMP",
+              "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+            }
+          }
+        },
+        {
+          "name": "Events sent to a SIEM",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "Splunk and Microsoft Sentinel on Business",
+              "url": "https://www.lastpass.com/pricing"
+            },
+            "1password": {
+              "mark": "yes",
+              "note": "Splunk, Elastic, Sumo Logic, Panther",
+              "url": "https://1password.com/teams/pricing/"
+            },
+            "bitwarden": {
+              "mark": "partial",
+              "note": "Event logs kept indefinitely and exportable; SIEM tools not named",
+              "url": "https://bitwarden.com/pricing/business/"
+            },
+            "keeper": {
+              "mark": "partial",
+              "note": "SIEM integration is an add-on",
+              "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+            }
+          }
+        },
+        {
+          "name": "Self-host option",
+          "cells": {
+            "lastpass": {
+              "mark": "no",
+              "note": "Describes itself as closed-source and cloud-based",
+              "url": "https://blog.lastpass.com/posts/lastpass-vs-bitwarden"
+            },
+            "1password": {
+              "mark": "unchecked",
+              "note": "Not checked yet"
+            },
+            "bitwarden": {
+              "mark": "yes",
+              "note": "Self-host on Enterprise",
+              "url": "https://bitwarden.com/pricing/business/"
+            },
+            "keeper": {
+              "mark": "partial",
+              "note": "Self-managed option announced for privileged access",
+              "url": "https://www.keepersecurity.com/blog/2026/11/05/self-managed-keeper-brings-zero-trust-pam-to-air-gapped-and-critical-infrastructure-environments/"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "persona": "Business buyer",
+      "capabilities": [
+        {
+          "name": "Price for a 120-person company",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "Business $7 per user per month",
+              "url": "https://www.lastpass.com/products/business"
+            },
+            "1password": {
+              "mark": "yes",
+              "note": "Business $8.99 per user per month, billed yearly",
+              "url": "https://1password.com/teams/pricing/"
+            },
+            "bitwarden": {
+              "mark": "yes",
+              "note": "Enterprise $6, Teams $4 per user per month, billed annually",
+              "url": "https://bitwarden.com/pricing/business/"
+            },
+            "keeper": {
+              "mark": "partial",
+              "note": "Prices are on Keeper's page but didn't load in our read",
+              "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+            }
+          }
+        },
+        {
+          "name": "24/7 phone support",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "24/7 phone, email, and live chat on Business",
+              "url": "https://blog.lastpass.com/posts/lastpass-vs-1password-vs-bitwarden-small-businesses"
+            },
+            "1password": {
+              "mark": "unchecked",
+              "note": "Not checked yet"
+            },
+            "bitwarden": {
+              "mark": "partial",
+              "note": "Priority 24/7 email support",
+              "url": "https://bitwarden.com/pricing/business/"
+            },
+            "keeper": {
+              "mark": "yes",
+              "note": "24/7 phone and live chat, per Keeper",
+              "url": "https://www.keepersecurity.com/vs/lastpass.html"
+            }
+          }
+        },
+        {
+          "name": "Family plan for each employee",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "LastPass Families for employees on Business",
+              "url": "https://www.lastpass.com/pricing"
+            },
+            "1password": {
+              "mark": "unchecked",
+              "note": "Not checked yet"
+            },
+            "bitwarden": {
+              "mark": "partial",
+              "note": "Free Families plan on Enterprise only",
+              "url": "https://bitwarden.com/pricing/business/"
+            },
+            "keeper": {
+              "mark": "yes",
+              "note": "Free Family Plan on Business",
+              "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "persona": "MSP",
+      "capabilities": [
+        {
+          "name": "Manage many clients from one console",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "Multiple clients from one dashboard",
+              "url": "https://www.lastpass.com/partner/managed-service-provider"
+            },
+            "1password": {
+              "mark": "yes",
+              "note": "MSP Edition; parent and child accounts",
+              "url": "https://1password.com/teams/pricing/"
+            },
+            "bitwarden": {
+              "mark": "unchecked",
+              "note": "Not checked yet"
+            },
+            "keeper": {
+              "mark": "partial",
+              "note": "KeeperMSP sold through sales; details not public",
+              "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+            }
+          }
+        },
+        {
+          "name": "Billing reports by client",
+          "cells": {
+            "lastpass": {
+              "mark": "yes",
+              "note": "Licenses and SKUs tracked across clients",
+              "url": "https://www.lastpass.com/partner/managed-service-provider"
+            },
+            "1password": {
+              "mark": "unchecked",
+              "note": "Not checked yet"
+            },
+            "bitwarden": {
+              "mark": "unchecked",
+              "note": "Not checked yet"
+            },
+            "keeper": {
+              "mark": "unchecked",
+              "note": "Not checked yet"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "positioning": {
+    "xAxis": {
+      "low": "Built for IT and security teams",
+      "high": "Built for everyone at the company"
+    },
+    "yAxis": {
+      "low": "Lower price",
+      "high": "Premium"
+    },
+    "points": [
+      {
+        "id": "lastpass",
+        "name": "LastPass",
+        "x": 78,
+        "y": 52,
+        "note": "Says it's built for small and midsize businesses, including non-technical users. Business is $7 per user."
+      },
+      {
+        "id": "1password",
+        "name": "1Password",
+        "x": 62,
+        "y": 80,
+        "note": "Polished, strong brand, highest list price of the three primary players at $8.99. Moving toward device trust and privileged access."
+      },
+      {
+        "id": "bitwarden",
+        "name": "Bitwarden",
+        "x": 24,
+        "y": 22,
+        "note": "Open source and self-hostable, priced at $4 to $6. LastPass's own comparison calls it built for technical teams."
+      },
+      {
+        "id": "keeper",
+        "name": "Keeper",
+        "x": 18,
+        "y": 58,
+        "note": "Sells certifications and privileged access to security and government buyers. Price placement is a guess: we couldn't verify its prices.",
+        "label": "top"
+      }
+    ]
+  }
+}

@@ -1,0 +1,288 @@
+[
+  {
+    "id": "harbor-pike",
+    "name": "Harbor & Pike CPAs",
+    "industry": "Accounting",
+    "size": "50 to 249",
+    "region": "Northeast",
+    "hq": "Hartford, CT",
+    "coords": [
+      -72.68,
+      41.76
+    ],
+    "team": "130 employees, 2 in IT",
+    "useCases": [
+      "SSO rollout",
+      "Adoption",
+      "Directory sync"
+    ],
+    "competitor": {
+      "id": "1password",
+      "outcome": "Chose over"
+    },
+    "reference": {
+      "status": "Available",
+      "contactRole": "IT director",
+      "personas": [
+        "IT admin",
+        "Business buyer"
+      ],
+      "formats": [
+        "Reference call",
+        "Peer email"
+      ],
+      "lastUsed": "2026-10-21",
+      "goodFor": "Accounting firms with non-technical staff. Rolled out to 130 people in 9 days with Entra ID sync."
+    }
+  },
+  {
+    "id": "cedar-valley",
+    "name": "Cedar Valley Health Billing",
+    "industry": "Healthcare admin",
+    "size": "50 to 249",
+    "region": "Midwest",
+    "hq": "Des Moines, IA",
+    "coords": [
+      -93.61,
+      41.59
+    ],
+    "team": "115 employees, 1 IT admin",
+    "useCases": [
+      "Compliance & audit",
+      "Adoption",
+      "Shared credentials"
+    ],
+    "competitor": {
+      "id": "bitwarden",
+      "outcome": "Switched from"
+    },
+    "reference": {
+      "status": "Available",
+      "contactRole": "IT admin",
+      "personas": [
+        "IT admin",
+        "Security lead"
+      ],
+      "formats": [
+        "Reference call"
+      ],
+      "lastUsed": "2026-09-30",
+      "goodFor": "Healthcare billing teams that left Bitwarden because front-office staff wouldn't use it."
+    }
+  },
+  {
+    "id": "northgate-it",
+    "name": "Northgate IT Services",
+    "industry": "Managed service provider",
+    "size": "Under 50",
+    "region": "Southeast",
+    "hq": "Charlotte, NC",
+    "coords": [
+      -80.84,
+      35.23
+    ],
+    "team": "28 employees, 34 client accounts",
+    "useCases": [
+      "MSP",
+      "Offboarding"
+    ],
+    "competitor": {
+      "id": "1password",
+      "outcome": "Chose over"
+    },
+    "reference": {
+      "status": "Limited",
+      "contactRole": "Founder",
+      "personas": [
+        "MSP"
+      ],
+      "formats": [
+        "Reference call",
+        "Webinar"
+      ],
+      "lastUsed": "2026-11-04",
+      "goodFor": "MSPs comparing multi-client consoles. Runs 34 clients from one dashboard."
+    }
+  },
+  {
+    "id": "summit-dental",
+    "name": "Summit Dental Partners",
+    "industry": "Dental group",
+    "size": "250 to 500",
+    "region": "West",
+    "hq": "Denver, CO",
+    "coords": [
+      -104.99,
+      39.74
+    ],
+    "team": "410 employees across 22 offices",
+    "useCases": [
+      "SSO rollout",
+      "Offboarding",
+      "Compliance & audit"
+    ],
+    "competitor": {
+      "id": "keeper",
+      "outcome": "Chose over"
+    },
+    "reference": {
+      "status": "Available",
+      "contactRole": "VP of operations",
+      "personas": [
+        "Business buyer",
+        "IT admin"
+      ],
+      "formats": [
+        "Reference call",
+        "Site visit"
+      ],
+      "lastUsed": "2026-08-12",
+      "goodFor": "Multi-location groups where staff turn over often. Offboarding went from days to minutes."
+    }
+  },
+  {
+    "id": "bluestem-law",
+    "name": "Bluestem Law Group",
+    "industry": "Legal",
+    "size": "50 to 249",
+    "region": "Southwest",
+    "hq": "Austin, TX",
+    "coords": [
+      -97.74,
+      30.27
+    ],
+    "team": "90 employees, outsourced IT",
+    "useCases": [
+      "Shared credentials",
+      "Compliance & audit"
+    ],
+    "competitor": {
+      "id": "1password",
+      "outcome": "Chose over"
+    },
+    "reference": {
+      "status": "Resting",
+      "contactRole": "Managing partner",
+      "personas": [
+        "Business buyer",
+        "Security lead"
+      ],
+      "formats": [
+        "Peer email"
+      ],
+      "lastUsed": "2026-10-02",
+      "goodFor": "Law firms where a partner signs and a security consultant reviews."
+    }
+  },
+  {
+    "id": "prairie-ag",
+    "name": "Prairie Ag Cooperative",
+    "industry": "Agriculture",
+    "size": "250 to 500",
+    "region": "Midwest",
+    "hq": "Omaha, NE",
+    "coords": [
+      -95.94,
+      41.26
+    ],
+    "team": "300 employees, 4 in IT",
+    "useCases": [
+      "Directory sync",
+      "SSO rollout",
+      "Adoption"
+    ],
+    "competitor": {
+      "id": "bitwarden",
+      "outcome": "Chose over"
+    },
+    "reference": {
+      "status": "Available",
+      "contactRole": "Security manager",
+      "personas": [
+        "Security lead",
+        "IT admin"
+      ],
+      "formats": [
+        "Reference call"
+      ],
+      "lastUsed": "2026-10-28",
+      "goodFor": "Security leads who ran a full questionnaire and asked about the 2022 incident."
+    }
+  },
+  {
+    "id": "tidewater-ins",
+    "name": "Tidewater Insurance Agency",
+    "industry": "Insurance",
+    "size": "Under 50",
+    "region": "Southeast",
+    "hq": "Norfolk, VA",
+    "coords": [
+      -76.29,
+      36.85
+    ],
+    "team": "38 employees",
+    "useCases": [
+      "Shared credentials",
+      "Adoption"
+    ],
+    "competitor": {
+      "id": "1password",
+      "outcome": "Switched from"
+    },
+    "reference": {
+      "status": "Available",
+      "contactRole": "Office manager",
+      "personas": [
+        "Business buyer",
+        "End users"
+      ],
+      "formats": [
+        "Peer email",
+        "Reference call"
+      ],
+      "lastUsed": "2026-09-09",
+      "goodFor": "Small offices outgrowing 1Password Teams Starter Pack at 20 users."
+    }
+  },
+  {
+    "id": "pacific-rim-eng",
+    "name": "Pacific Rim Engineering",
+    "industry": "Engineering",
+    "size": "50 to 249",
+    "region": "West",
+    "hq": "Portland, OR",
+    "coords": [
+      -122.68,
+      45.52
+    ],
+    "team": "160 employees, 3 in IT",
+    "useCases": [
+      "SSO rollout",
+      "Directory sync"
+    ],
+    "competitor": null,
+    "reference": null
+  },
+  {
+    "id": "granite-mfg",
+    "name": "Granite State Manufacturing",
+    "industry": "Manufacturing",
+    "size": "250 to 500",
+    "region": "Northeast",
+    "hq": "Manchester, NH",
+    "coords": [
+      -71.46,
+      42.99
+    ],
+    "team": "280 employees",
+    "useCases": [
+      "Offboarding",
+      "Compliance & audit"
+    ],
+    "competitor": {
+      "id": "bitwarden",
+      "outcome": "Switched from"
+    },
+    "reference": null
+  }
+]

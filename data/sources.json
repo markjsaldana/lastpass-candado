@@ -1,0 +1,175 @@
+[
+  {
+    "id": "1password-pricing",
+    "competitorId": "1password",
+    "type": "pricing page",
+    "url": "https://1password.com/teams/pricing/",
+    "internal": false,
+    "frequency": "Daily",
+    "lookFor": "Per-user prices, seat minimums and caps, what moved between Teams Starter Pack and Business"
+  },
+  {
+    "id": "1password-releases",
+    "competitorId": "1password",
+    "type": "release notes",
+    "url": "https://releases.1password.com/provisioning/",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Provisioning, SSO, and admin changes an IT admin would notice in a rollout",
+    "snapshot": "1password-provisioning"
+  },
+  {
+    "id": "1password-blog",
+    "competitorId": "1password",
+    "type": "blog",
+    "url": "https://1password.com/blog",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "New products, analyst recognition, and which buyers they're writing for"
+  },
+  {
+    "id": "1password-compare",
+    "competitorId": "1password",
+    "type": "comparison page",
+    "url": "https://1password.com/compare/1password-vs-lastpass",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Every claim about LastPass, especially security history, certifications, and MSP features"
+  },
+  {
+    "id": "1password-security",
+    "competitorId": "1password",
+    "type": "security pages",
+    "url": "https://1password.com/teams/pricing/",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "Certifications and audit claims a security lead will put in a questionnaire"
+  },
+  {
+    "id": "bitwarden-pricing",
+    "competitorId": "bitwarden",
+    "type": "pricing page",
+    "url": "https://bitwarden.com/pricing/business/",
+    "internal": false,
+    "frequency": "Daily",
+    "lookFor": "Per-user prices and which features sit on Teams versus Enterprise"
+  },
+  {
+    "id": "bitwarden-releases",
+    "competitorId": "bitwarden",
+    "type": "release notes",
+    "url": "https://bitwarden.com/help/releasenotes/",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Encryption changes, provisioning, and admin policy features",
+    "snapshot": "bitwarden-releases"
+  },
+  {
+    "id": "bitwarden-blog",
+    "competitorId": "bitwarden",
+    "type": "blog",
+    "url": "https://bitwarden.com/blog/",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Launches for business plans and posts aimed at LastPass customers"
+  },
+  {
+    "id": "bitwarden-compare",
+    "competitorId": "bitwarden",
+    "type": "comparison page",
+    "url": "https://bitwarden.com/bitwarden-alternatives/",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Price and feature claims about LastPass"
+  },
+  {
+    "id": "bitwarden-help",
+    "competitorId": "bitwarden",
+    "type": "help center",
+    "url": "https://bitwarden.com/help/lastpass-enterprise-migration-guide/",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "How easy they make it to leave LastPass: import steps, provisioning, and limits"
+  },
+  {
+    "id": "keeper-pricing",
+    "competitorId": "keeper",
+    "type": "pricing page",
+    "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Plan names, what's an add-on, and certification claims"
+  },
+  {
+    "id": "keeper-compare",
+    "competitorId": "keeper",
+    "type": "comparison page",
+    "url": "https://www.keepersecurity.com/vs/lastpass.html",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Claims about LastPass's incident history, encryption model, and certifications"
+  },
+  {
+    "id": "keeper-blog",
+    "competitorId": "keeper",
+    "type": "blog",
+    "url": "https://www.keepersecurity.com/blog/",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Press releases on certifications, PAM, and government work"
+  },
+  {
+    "id": "lastpass-security",
+    "competitorId": "category",
+    "type": "security pages",
+    "url": "https://www.lastpass.com/security",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Our own published security claims. Reps may only say what these pages and LastPass's incident posts say."
+  },
+  {
+    "id": "reviews",
+    "competitorId": "category",
+    "type": "review themes",
+    "url": "Public review sites, summarized by hand (no scraping)",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "Recurring praise and complaints from IT admins and end users"
+  },
+  {
+    "id": "winloss",
+    "competitorId": "category",
+    "type": "win-loss notes",
+    "url": "Internal: win-loss interviews and CRM closed-lost reasons",
+    "internal": true,
+    "frequency": "Continuous",
+    "lookFor": "Which competitor, which buyer decided, and the coded reason"
+  },
+  {
+    "id": "calls",
+    "competitorId": "category",
+    "type": "call mentions",
+    "url": "Internal: call recordings tracked for competitor names and incident questions",
+    "internal": true,
+    "frequency": "Continuous",
+    "lookFor": "Competitor mentions by segment, and every time a buyer raises the 2022 incident"
+  },
+  {
+    "id": "mystery-shop",
+    "competitorId": "category",
+    "type": "mystery-shop calls",
+    "url": "Sales calls I book with 1Password and Bitwarden as a prospect",
+    "internal": true,
+    "frequency": "Monthly",
+    "lookFor": "How their reps pitch, what they say about LastPass, and how they handle price"
+  },
+  {
+    "id": "cs-notes",
+    "competitorId": "category",
+    "type": "CS notes",
+    "url": "Internal: CS renewal notes, churn-risk flags, and MSP partner feedback",
+    "internal": true,
+    "frequency": "Weekly",
+    "lookFor": "Customers and MSP partners who mention a competitor at renewal"
+  }
+]

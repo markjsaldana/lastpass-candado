@@ -1,0 +1,155 @@
+{
+  "entries": [
+    {
+      "date": "2026-11-16",
+      "signal": 10,
+      "kind": "Sales alert",
+      "destination": "#comp-alerts Slack channel",
+      "action": "Same-day alert with the incident answer and its six links",
+      "outcome": "Incident answer is now identical on all three battlecards. 14 AEs opened it the same day."
+    },
+    {
+      "date": "2026-11-16",
+      "signal": 10,
+      "kind": "Website",
+      "destination": "Web team and Legal",
+      "action": "Asked for a comparison page refresh with links to LastPass's security pages",
+      "outcome": "Draft of the updated 1Password comparison page in Legal review."
+    },
+    {
+      "date": "2026-11-16",
+      "signal": 11,
+      "kind": "Product",
+      "destination": "Partner product manager",
+      "action": "Asked exactly what the MSP console supports, so we can answer the multi-tenancy claim",
+      "outcome": "Product review booked. No claim goes on the website until it's done."
+    },
+    {
+      "date": "2026-11-16",
+      "signal": 12,
+      "kind": "Sales alert",
+      "destination": "#comp-alerts Slack channel",
+      "action": "Alert with the answer to Keeper's breach and fine claims",
+      "outcome": "Keeper card updated. Reps told never to comment on Keeper's own record."
+    },
+    {
+      "date": "2026-11-13",
+      "signal": 16,
+      "kind": "CS",
+      "destination": "Partner managers",
+      "action": "MSP one-pager and a 20-minute console demo for both partners",
+      "outcome": "Both partners booked demos."
+    },
+    {
+      "date": "2026-11-09",
+      "signal": 7,
+      "kind": "Sales alert",
+      "destination": "#comp-alerts Slack channel",
+      "action": "Alert with the plan-for-plan price answer",
+      "outcome": "Price section of the Bitwarden card updated. SDRs added the angle to 60 accounts under 100 employees."
+    },
+    {
+      "date": "2026-11-09",
+      "signal": 8,
+      "kind": "Win-loss",
+      "destination": "Sales leadership",
+      "action": "Loss reviewed in the weekly forecast call",
+      "outcome": "Leadership asked for a proposal to move the security review earlier. In this week's So what."
+    },
+    {
+      "date": "2026-11-09",
+      "signal": 9,
+      "kind": "CS",
+      "destination": "CS team",
+      "action": "Renewal talking points for accounts on Business",
+      "outcome": "Competitor check added to Q1 renewal calls."
+    },
+    {
+      "date": "2026-11-02",
+      "signal": 4,
+      "kind": "PMM",
+      "destination": "Bitwarden battlecard",
+      "action": "Landmine question added about apps outside the vault",
+      "outcome": "Reps asking it in discovery; SaaS Monitoring demos up in Bitwarden deals."
+    },
+    {
+      "date": "2026-11-02",
+      "signal": 5,
+      "kind": "Win-loss",
+      "destination": "Win-loss interview guide",
+      "action": "Question added: who first brought Bitwarden into the evaluation?",
+      "outcome": "Three interviews this month will test it."
+    }
+  ],
+  "kpis": [
+    {
+      "name": "Win rate by competitor",
+      "why": "The number leadership cares about, split by 1Password, Bitwarden, and Keeper",
+      "measure": "Closed-won over closed in deals with a competitor tagged in the CRM",
+      "target": "Up against each primary competitor, quarter over quarter"
+    },
+    {
+      "name": "Pipeline influenced",
+      "why": "Shows what competitive content is worth in dollars",
+      "measure": "Open pipeline in deals where a rep used a card, the assistant, or the trust pack",
+      "target": "Reported monthly from day 90"
+    },
+    {
+      "name": "Security review to proposal",
+      "why": "Tests the fix for losing late to the security lead",
+      "measure": "Share of deals over 100 seats with a security lead meeting before the proposal",
+      "target": "Most of them by end of quarter"
+    },
+    {
+      "name": "Battlecard usage",
+      "why": "Shows reps trust and use the content",
+      "measure": "Weekly opens from the CRM and Slack, per rep",
+      "target": "Most active AEs open a card each week"
+    },
+    {
+      "name": "Assistant questions it couldn't answer",
+      "why": "Each one is a gap in the library",
+      "measure": "Unanswered questions per week, and days to close each one",
+      "target": "Every gap answered or logged within 5 business days"
+    },
+    {
+      "name": "Win-loss interviews completed",
+      "why": "Hypotheses stay hypotheses without them",
+      "measure": "Interviews per month, wins and losses",
+      "target": "At least 8 a month, half losses"
+    }
+  ],
+  "pipeline": {
+    "quarter": "Q4 2026 to date (sample)",
+    "note": "Sample numbers to show the report format. Real numbers come from CRM competitor tags and content-usage logs once the baseline is set.",
+    "rows": [
+      {
+        "competitorId": "1password",
+        "opps": 42,
+        "pipeline": 1260000,
+        "won": 11,
+        "lost": 9,
+        "winRateBefore": 41,
+        "winRateAfter": 55
+      },
+      {
+        "competitorId": "bitwarden",
+        "opps": 37,
+        "pipeline": 610000,
+        "won": 12,
+        "lost": 8,
+        "winRateBefore": 48,
+        "winRateAfter": 60
+      },
+      {
+        "competitorId": "keeper",
+        "opps": 9,
+        "pipeline": 240000,
+        "won": 2,
+        "lost": 3,
+        "winRateBefore": 38,
+        "winRateAfter": 40
+      }
+    ]
+  }
+}

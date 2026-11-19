@@ -1,0 +1,85 @@
+[
+  {
+    "id": "1password",
+    "name": "1Password",
+    "parent": null,
+    "tier": "Primary",
+    "category": "Password manager sold on polish and brand, moving into device trust and privileged access",
+    "competesFor": ["Security lead", "IT admin", "End users"],
+    "whyTheyWin": "Hypothesis: security leads see it as the safe choice, and its comparison page leads with LastPass's incident history. It wins when the security lead has the strongest voice in the deal and price per user matters less.",
+    "facts": [
+      {
+        "fact": "Business is $8.99 per user per month, billed yearly. Teams Starter Pack is $24.95 a month for 10 users, up to 20.",
+        "source": "1Password business pricing page, checked Nov 19, 2026",
+        "url": "https://1password.com/teams/pricing/"
+      },
+      {
+        "fact": "Its LastPass comparison page says \"LastPass has experienced multiple security incidents involving customer vault data.\"",
+        "source": "1Password vs LastPass page, checked Nov 19, 2026",
+        "url": "https://1password.com/compare/1password-vs-lastpass"
+      }
+    ]
+  },
+  {
+    "id": "bitwarden",
+    "name": "Bitwarden",
+    "parent": null,
+    "tier": "Primary",
+    "category": "Open-source password manager with low per-user prices and a self-host option",
+    "competesFor": ["Business buyer", "IT admin", "MSP"],
+    "whyTheyWin": "Hypothesis: it wins on price and open source. Technical IT teams like that they can read the code and host it themselves, and a CFO sees a lower number on the quote.",
+    "facts": [
+      {
+        "fact": "Teams is $4 and Enterprise is $6 per user per month, billed annually. SSO, enterprise policies, and self-hosting are Enterprise only.",
+        "source": "Bitwarden business pricing page, checked Nov 19, 2026",
+        "url": "https://bitwarden.com/pricing/business/"
+      },
+      {
+        "fact": "Publishes a migration guide for LastPass Enterprise customers moving to Bitwarden.",
+        "source": "Bitwarden help center, checked Nov 19, 2026",
+        "url": "https://bitwarden.com/help/lastpass-enterprise-migration-guide/"
+      }
+    ]
+  },
+  {
+    "id": "keeper",
+    "name": "Keeper",
+    "parent": null,
+    "tier": "Secondary",
+    "category": "Password and privileged access platform with government certifications",
+    "competesFor": ["Security lead", "IT admin"],
+    "whyTheyWin": "Hypothesis: it wins in regulated buyers and public-sector-adjacent deals where certifications decide the shortlist, and when the buyer also wants privileged access management.",
+    "facts": [
+      {
+        "fact": "Claims FedRAMP High and GovRAMP authorization, SOC 2, and ISO 27001, 27017, and 27018.",
+        "source": "Keeper business pricing page, checked Nov 19, 2026",
+        "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+      },
+      {
+        "fact": "Its LastPass comparison page says Keeper \"has never experienced a data breach\" and cites LastPass's 2022 breach and UK fine.",
+        "source": "Keeper vs LastPass page, checked Nov 19, 2026",
+        "url": "https://www.keepersecurity.com/vs/lastpass.html"
+      }
+    ]
+  },
+  {
+    "id": "dashlane",
+    "name": "Dashlane",
+    "parent": null,
+    "tier": "Watch",
+    "category": "Business password manager",
+    "competesFor": ["Business buyer"],
+    "whyTheyWin": "Not researched yet. Tracked so reps can log mentions; a card gets built if mentions pass five a month.",
+    "facts": []
+  },
+  {
+    "id": "nordpass",
+    "name": "NordPass",
+    "parent": null,
+    "tier": "Watch",
+    "category": "Business password manager",
+    "competesFor": ["Business buyer"],
+    "whyTheyWin": "Not researched yet. Same rule as Dashlane: log mentions, build a card if they pass five a month.",
+    "facts": []
+  }
+]

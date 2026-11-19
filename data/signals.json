@@ -1,0 +1,413 @@
+[
+  {
+    "id": 1,
+    "weekOf": "2026-11-02",
+    "date": "2026-10-22",
+    "competitorId": "1password",
+    "sourceId": "1password-releases",
+    "type": "feature",
+    "change": "1Password released SCIM Bridge 2.9.17, a patch for two CVEs, and told Entra ID, Okta, OneLogin, and JumpCloud customers to switch to hosted provisioning.",
+    "whyItMatters": "IT admins comparing rollouts will ask how users get provisioned and who maintains it. Treat it as a setup question, and never use it to attack 1Password's security.",
+    "whatToSay": "Ask how they plan to provision users from their directory and who will own it. Never comment on another vendor's CVEs. If the buyer brings it up, point them to the vendor's own release notes.",
+    "personas": [
+      "IT admin",
+      "Security lead"
+    ],
+    "impact": 3,
+    "confidence": "Confirmed",
+    "urgency": "This week's digest",
+    "owners": [
+      "PMM",
+      "Sales"
+    ],
+    "status": "Talk track shipped",
+    "citation": {
+      "label": "1Password provisioning release notes",
+      "url": "https://releases.1password.com/provisioning/"
+    }
+  },
+  {
+    "id": 2,
+    "weekOf": "2026-11-02",
+    "date": "2026-10-22",
+    "competitorId": "1password",
+    "sourceId": "1password-blog",
+    "type": "ai",
+    "change": "1Password introduced 1Password for Agents, at no extra cost for Individual and Family accounts.",
+    "whyItMatters": "Consumer plans only for now. Worth watching in case it reaches business plans, since security leads are starting to ask how AI agents get credentials.",
+    "whatToSay": "No talk track. If a buyer asks, it's for personal and family accounts today.",
+    "personas": [
+      "Security lead"
+    ],
+    "impact": 2,
+    "confidence": "Confirmed",
+    "urgency": "Monthly review",
+    "owners": [
+      "PMM",
+      "Product"
+    ],
+    "status": "Logged",
+    "citation": {
+      "label": "1Password blog, Oct 22, 2026",
+      "url": "https://1password.com/blog/1password-for-ai-agents"
+    }
+  },
+  {
+    "id": 3,
+    "weekOf": "2026-11-02",
+    "date": "2026-10-23",
+    "competitorId": "1password",
+    "sourceId": "1password-blog",
+    "type": "analyst",
+    "change": "1Password Privileged Access was named an Honorable Mention in the 2026 Gartner Magic Quadrant for Privileged Access Management.",
+    "whyItMatters": "Security leads may quote it. It covers a separate privileged access product, not the password manager in our deals.",
+    "whatToSay": "If it comes up, clarify that the recognition is for privileged access management, which is a different purchase from a business password manager.",
+    "personas": [
+      "Security lead"
+    ],
+    "impact": 2,
+    "confidence": "Confirmed",
+    "urgency": "Monthly review",
+    "owners": [
+      "PMM"
+    ],
+    "status": "Logged",
+    "citation": {
+      "label": "1Password blog, Oct 23, 2026",
+      "url": "https://1password.com/blog/1password-recognized-in-2026-gartner-magic-quadrant-for-privileged-access-management"
+    }
+  },
+  {
+    "id": 4,
+    "weekOf": "2026-11-02",
+    "date": "2026-10-14",
+    "competitorId": "bitwarden",
+    "sourceId": "bitwarden-blog",
+    "type": "feature",
+    "change": "Bitwarden updated its launch post for Access Intelligence, an Enterprise-plan feature for spotting credential risk.",
+    "whyItMatters": "Bitwarden now has an answer when buyers ask about visibility. LastPass's own comparison says Access Intelligence sees only apps already in the vault. SaaS Monitoring is on Business Max, not Business.",
+    "whatToSay": "Ask: \"What will it show you about apps your team uses that were never saved in the vault?\" If visibility matters, price Business Max, where SaaS Monitoring lives.",
+    "personas": [
+      "IT admin",
+      "Security lead"
+    ],
+    "impact": 3,
+    "confidence": "Confirmed",
+    "urgency": "This week's digest",
+    "owners": [
+      "PMM",
+      "Sales"
+    ],
+    "status": "Talk track shipped",
+    "citation": {
+      "label": "Bitwarden blog",
+      "url": "https://bitwarden.com/blog/introducing-bitwarden-access-intelligence-proactive-security-protection/"
+    }
+  },
+  {
+    "id": 5,
+    "weekOf": "2026-11-02",
+    "date": "2026-10-30",
+    "competitorId": "bitwarden",
+    "sourceId": "calls",
+    "type": "winloss",
+    "change": "Sample: Bitwarden came up in 9 of 31 recorded first calls with companies under 100 employees in October, usually raised by the IT admin.",
+    "whyItMatters": "Bitwarden enters through IT at smaller companies. The business buyer often hasn't seen the comparison yet.",
+    "whatToSay": "Get the business buyer on the second call. Show the admin console to the person who will run the rollout and the end-user app to the person who signs.",
+    "personas": [
+      "IT admin",
+      "Business buyer"
+    ],
+    "impact": 3,
+    "confidence": "Likely",
+    "urgency": "This week's digest",
+    "owners": [
+      "Sales leadership",
+      "PMM"
+    ],
+    "status": "In review"
+  },
+  {
+    "id": 6,
+    "weekOf": "2026-11-09",
+    "date": "2026-11-05",
+    "competitorId": "keeper",
+    "sourceId": "keeper-blog",
+    "type": "feature",
+    "change": "Keeper announced self-managed Keeper for privileged access in air-gapped and critical infrastructure environments.",
+    "whyItMatters": "Aimed at government and critical infrastructure, not our core 50 to 500 person buyer.",
+    "whatToSay": "No talk track.",
+    "personas": [
+      "Security lead"
+    ],
+    "impact": 1,
+    "confidence": "Confirmed",
+    "urgency": "Monthly review",
+    "owners": [
+      "PMM"
+    ],
+    "status": "Logged",
+    "citation": {
+      "label": "Keeper press release, Nov 5, 2026",
+      "url": "https://www.keepersecurity.com/blog/2026/11/05/self-managed-keeper-brings-zero-trust-pam-to-air-gapped-and-critical-infrastructure-environments/"
+    }
+  },
+  {
+    "id": 7,
+    "weekOf": "2026-11-09",
+    "date": "2026-11-09",
+    "competitorId": "bitwarden",
+    "sourceId": "bitwarden-compare",
+    "type": "pricing",
+    "change": "Bitwarden's comparison page prices Bitwarden at \"$6/user per month, everything included\" and LastPass at \"$7/user per month + add-ons\".",
+    "whyItMatters": "Business buyers will bring this line to the pricing call. The $6 is Bitwarden Enterprise. Its $4 Teams plan leaves out SSO, enterprise policies, and account recovery.",
+    "whatToSay": "\"Their numbers are right, so let's compare the same thing. Which Bitwarden plan is your quote on? SSO and policies are on Enterprise at $6. LastPass Business is $7 with directory integrations, 100+ policies, and phone support.\"",
+    "personas": [
+      "Business buyer",
+      "IT admin"
+    ],
+    "impact": 5,
+    "confidence": "Confirmed",
+    "urgency": "Alert now",
+    "owners": [
+      "Sales",
+      "SDRs",
+      "Website"
+    ],
+    "status": "Alert sent",
+    "citation": {
+      "label": "Bitwarden comparison page",
+      "url": "https://bitwarden.com/bitwarden-alternatives/"
+    }
+  },
+  {
+    "id": 8,
+    "weekOf": "2026-11-09",
+    "date": "2026-11-06",
+    "competitorId": "1password",
+    "sourceId": "winloss",
+    "type": "winloss",
+    "change": "Sample: lost a 140-person medical billing company to 1Password. The security lead cited the 2022 incident. The CFO preferred LastPass on price and ease of use.",
+    "whyItMatters": "The second loss this quarter where the security lead decided the deal and nobody from LastPass met with them until the proposal stage.",
+    "whatToSay": "Book the security review before the proposal, not after. Send the trust pack to the security lead after the first call.",
+    "personas": [
+      "Security lead",
+      "Business buyer"
+    ],
+    "impact": 4,
+    "confidence": "Likely",
+    "urgency": "Alert now",
+    "owners": [
+      "Sales leadership",
+      "PMM",
+      "Sales"
+    ],
+    "status": "Alert sent"
+  },
+  {
+    "id": 9,
+    "weekOf": "2026-11-09",
+    "date": "2026-11-09",
+    "competitorId": "bitwarden",
+    "sourceId": "bitwarden-help",
+    "type": "positioning",
+    "change": "Bitwarden's help center has a migration guide for LastPass Enterprise customers: direct import, then onboarding through SCIM or Directory Connector.",
+    "whyItMatters": "Customers at renewal can see a short path out. CS should assume the price-sensitive ones have read it.",
+    "whatToSay": "CS: open renewal calls with adoption and usage numbers, before price comes up.",
+    "personas": [
+      "IT admin"
+    ],
+    "impact": 3,
+    "confidence": "Confirmed",
+    "urgency": "This week's digest",
+    "owners": [
+      "CS",
+      "PMM"
+    ],
+    "status": "Talk track shipped",
+    "citation": {
+      "label": "Bitwarden LastPass Enterprise migration guide",
+      "url": "https://bitwarden.com/help/lastpass-enterprise-migration-guide/"
+    }
+  },
+  {
+    "id": 10,
+    "weekOf": "2026-11-16",
+    "date": "2026-11-16",
+    "competitorId": "1password",
+    "sourceId": "1password-compare",
+    "type": "positioning",
+    "change": "1Password's LastPass page says \"LastPass has experienced multiple security incidents involving customer vault data\" and lists ISO 27001, 27017, 27018, and 27701 for itself.",
+    "whyItMatters": "Security leads read this page before the first call. Arguing about the past costs reps credibility; links to what changed hold up better.",
+    "whatToSay": "Don't dispute the history. \"Here's what LastPass published about what happened and what changed since, and here's our certification list.\" Then send the incident posts and the security page. Never add detail that isn't in them.",
+    "personas": [
+      "Security lead",
+      "Business buyer"
+    ],
+    "impact": 5,
+    "confidence": "Confirmed",
+    "urgency": "Alert now",
+    "owners": [
+      "Sales",
+      "PMM",
+      "Website"
+    ],
+    "status": "Alert sent",
+    "citation": {
+      "label": "1Password vs LastPass page",
+      "url": "https://1password.com/compare/1password-vs-lastpass"
+    }
+  },
+  {
+    "id": 11,
+    "weekOf": "2026-11-16",
+    "date": "2026-11-16",
+    "competitorId": "1password",
+    "sourceId": "1password-compare",
+    "type": "partner",
+    "change": "The same 1Password page says \"Unlike LastPass, 1Password supports multi-tenancy with parent and child account structures.\"",
+    "whyItMatters": "MSP partners will read this as \"LastPass can't manage many clients.\" LastPass's MSP program says partners manage multiple clients from one dashboard and track licenses across clients.",
+    "whatToSay": "MSP reps: demo the multi-client dashboard and the per-client billing report in the first meeting. Don't argue about the term \"multi-tenancy.\" Show the screen.",
+    "personas": [
+      "MSP"
+    ],
+    "impact": 4,
+    "confidence": "Confirmed",
+    "urgency": "Alert now",
+    "owners": [
+      "Sales",
+      "PMM",
+      "Website"
+    ],
+    "status": "In review",
+    "citation": {
+      "label": "1Password vs LastPass page",
+      "url": "https://1password.com/compare/1password-vs-lastpass"
+    }
+  },
+  {
+    "id": 12,
+    "weekOf": "2026-11-16",
+    "date": "2026-11-16",
+    "competitorId": "keeper",
+    "sourceId": "keeper-compare",
+    "type": "positioning",
+    "change": "Keeper's LastPass page says Keeper \"has never experienced a data breach\" and cites LastPass's 2022 breach, a class-action settlement, and the UK ICO fine.",
+    "whyItMatters": "In regulated deals the security lead may forward this page to the business buyer. The fine is public, so reps should never act surprised by it.",
+    "whatToSay": "\"Yes, the UK regulator fined LastPass over 2022. Here's what LastPass says it changed since then.\" Then send the incident posts. Never comment on Keeper's own record.",
+    "personas": [
+      "Security lead"
+    ],
+    "impact": 4,
+    "confidence": "Confirmed",
+    "urgency": "Alert now",
+    "owners": [
+      "Sales",
+      "PMM"
+    ],
+    "status": "Alert sent",
+    "citation": {
+      "label": "Keeper vs LastPass page",
+      "url": "https://www.keepersecurity.com/vs/lastpass.html"
+    }
+  },
+  {
+    "id": 13,
+    "weekOf": "2026-11-16",
+    "date": "2026-11-16",
+    "competitorId": "bitwarden",
+    "sourceId": "bitwarden-releases",
+    "type": "security",
+    "change": "Bitwarden's 2026.11.0 release notes say new accounts get updated encryption algorithms, with a new whitepaper version to follow.",
+    "whyItMatters": "Security leads may ask what our current algorithms are. LastPass publishes AES-256 and PBKDF2-SHA256 with 600,000 iterations.",
+    "whatToSay": "No talk track yet. Wait for Bitwarden's whitepaper before saying anything about what changed.",
+    "personas": [
+      "Security lead"
+    ],
+    "impact": 2,
+    "confidence": "Confirmed",
+    "urgency": "Monthly review",
+    "owners": [
+      "PMM",
+      "Product"
+    ],
+    "status": "Logged",
+    "citation": {
+      "label": "Bitwarden release notes",
+      "url": "https://bitwarden.com/help/releasenotes/"
+    }
+  },
+  {
+    "id": 14,
+    "weekOf": "2026-11-16",
+    "date": "2026-11-16",
+    "competitorId": "1password",
+    "sourceId": "1password-pricing",
+    "type": "pricing",
+    "change": "Price check: 1Password Business is $8.99 per user per month, billed yearly. Teams Starter Pack is $24.95 a month for 10 users, with extra seats at $4.99 up to 20.",
+    "whyItMatters": "Small teams compare a flat $24.95 with per-user pricing. Over 20 users, 1Password means Business at $8.99, against $7 for LastPass Business.",
+    "whatToSay": "For teams over 20: \"1Password's Business plan is $8.99 per user. LastPass Business is $7, with phone support around the clock.\"",
+    "personas": [
+      "Business buyer"
+    ],
+    "impact": 3,
+    "confidence": "Confirmed",
+    "urgency": "This week's digest",
+    "owners": [
+      "Sales",
+      "SDRs"
+    ],
+    "status": "Talk track shipped",
+    "citation": {
+      "label": "1Password business pricing page",
+      "url": "https://1password.com/teams/pricing/"
+    }
+  },
+  {
+    "id": 15,
+    "weekOf": "2026-11-16",
+    "date": "2026-11-10",
+    "competitorId": "keeper",
+    "sourceId": "keeper-blog",
+    "type": "security",
+    "change": "Keeper announced a milestone toward US Department of Defense IL5 authorization.",
+    "whyItMatters": "Government work. Not a factor in our core deals.",
+    "whatToSay": "No talk track.",
+    "personas": [
+      "Security lead"
+    ],
+    "impact": 1,
+    "confidence": "Confirmed",
+    "urgency": "Monthly review",
+    "owners": [
+      "PMM"
+    ],
+    "status": "Logged",
+    "citation": {
+      "label": "Keeper press release, Nov 10, 2026",
+      "url": "https://www.keepersecurity.com/blog/2026/11/10/keeper-surpasses-key-milestone-toward-dod-il5-authorization-hardening-identity-security-for-national-defense/"
+    }
+  },
+  {
+    "id": 16,
+    "weekOf": "2026-11-16",
+    "date": "2026-11-13",
+    "competitorId": "1password",
+    "sourceId": "cs-notes",
+    "type": "partner",
+    "change": "Sample: two MSP partners asked their partner managers for a side-by-side with 1Password's MSP edition this week.",
+    "whyItMatters": "Signal #11 is reaching partners. Two in one week is worth an answer before quarter end.",
+    "whatToSay": "Partner managers: send the MSP one-pager and offer a 20-minute demo of the multi-client dashboard.",
+    "personas": [
+      "MSP"
+    ],
+    "impact": 3,
+    "confidence": "Likely",
+    "urgency": "This week's digest",
+    "owners": [
+      "CS",
+      "PMM"
+    ],
+    "status": "In review"
+  }
+]

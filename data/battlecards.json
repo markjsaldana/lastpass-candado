@@ -1,0 +1,378 @@
+[
+  {
+    "competitorId": "1password",
+    "updatedOn": "2026-11-16",
+    "updatedBySignals": [
+      {
+        "signal": 10,
+        "section": "Objection handling",
+        "change": "Incident answer rewritten to use only LastPass's published statements, with links."
+      },
+      {
+        "signal": 14,
+        "section": "Where we win",
+        "change": "Price line updated: 1Password Business is $8.99 per user per month, billed yearly."
+      },
+      {
+        "signal": 11,
+        "section": "Landmine questions",
+        "change": "Added an MSP question about managing clients."
+      }
+    ],
+    "quickDismiss": "1Password is a good product with a higher price. LastPass Business is $7 per user against 1Password's $8.99, with 24/7 phone support, and it's built so non-technical staff use it from day one.",
+    "whereWeWin": [
+      {
+        "point": "Price at 20+ users",
+        "detail": "Teams Starter Pack stops at 20 users. After that it's Business at $8.99 per user per month, billed yearly. LastPass Business is $7.",
+        "proofType": "Cost math",
+        "proof": "At 120 users that's $12,946 a year for 1Password Business against $10,080 for LastPass Business, at list prices."
+      },
+      {
+        "point": "Adoption by non-technical staff",
+        "detail": "LastPass's own comparison says it's designed so employees can start with little to no training. Adoption is what the business buyer is paying for.",
+        "proofType": "Customer story",
+        "proof": "Harbor & Pike CPAs: 96% of staff active in 30 days, with no training sessions (sample customer)."
+      },
+      {
+        "point": "Support when something breaks",
+        "detail": "LastPass Business includes 24/7 phone, email, and live chat. LastPass says 1Password support runs business hours with no 24/7 phone option; confirm that with the buyer rather than asserting it.",
+        "proofType": "Demo moment",
+        "proof": "Show where an admin starts a phone support case from the Admin Console."
+      }
+    ],
+    "whereTheyWin": [
+      {
+        "point": "The security lead trusts their record more",
+        "handle": "Don't compete on history. Get the security lead a meeting before the proposal, send the incident posts and certification list, and offer a security review with an SE."
+      },
+      {
+        "point": "Developer and device features",
+        "handle": "1Password sells SSH, CLI, and device trust tools. If the buyer needs those, say so plainly and qualify the deal early. Most 50 to 500 person buyers are buying a password manager."
+      }
+    ],
+    "landmines": [
+      "\"Once you pass 20 people, which 1Password plan will you be on, and what's the per-user price?\"",
+      "\"Who on your team will need help on a weekend, and how will they reach support?\"",
+      "\"How will your non-technical staff learn the tool? Is training in your rollout plan?\"",
+      "\"If you manage passwords for other companies, how will you see all your clients in one place?\""
+    ],
+    "objections": [
+      {
+        "objection": "\"LastPass had a breach. Why would we trust you with our passwords?\"",
+        "response": "Don't dispute it, and don't add detail. Say what LastPass has published: in 2022 an attacker copied a backup of customer vault data. Passwords and notes in it were encrypted; URLs were not. LastPass says it never stores or knows the master password. Since then, LastPass says it rebuilt its infrastructure on a new cloud platform, rotated secrets and certificates, changed privileged access controls, raised PBKDF2 to 600,000 iterations, and added ISO 27701 to ISO 27001, SOC 2 Type II, SOC 3, and BSI C5. If they ask about 2026: the June incident was at a vendor, Klue, and LastPass says customer vaults were not affected. Then send these links and offer the security review.",
+        "sources": [
+          {
+            "label": "LastPass incident notice, 2022 updates",
+            "url": "https://blog.lastpass.com/posts/notice-of-recent-security-incident"
+          },
+          {
+            "label": "LastPass incident update, Mar 1, 2023",
+            "url": "https://blog.lastpass.com/posts/security-incident-update-recommended-actions"
+          },
+          {
+            "label": "LastPass security FAQ (May 2026 post)",
+            "url": "https://blog.lastpass.com/posts/lastpass-vs-bitwarden"
+          },
+          {
+            "label": "LastPass zero-knowledge security page",
+            "url": "https://www.lastpass.com/security/zero-knowledge-security"
+          },
+          {
+            "label": "LastPass Klue incident response, June 22, 2026",
+            "url": "https://blog.lastpass.com/posts/klue-supply-chain-incident-and-lastpass-response"
+          }
+        ]
+      },
+      {
+        "objection": "\"1Password has more certifications.\"",
+        "response": "1Password lists ISO 27001, 27017, 27018, and 27701 plus SOC 2. LastPass lists ISO 27001, ISO 27701, SOC 2 Type II, SOC 3, and BSI C5. Ask which certifications their compliance team requires, then send the matching reports through the security review.",
+        "sources": [
+          {
+            "label": "1Password vs LastPass page",
+            "url": "https://1password.com/compare/1password-vs-lastpass"
+          },
+          {
+            "label": "LastPass security page",
+            "url": "https://www.lastpass.com/security"
+          }
+        ]
+      },
+      {
+        "objection": "\"1Password's Secret Key makes it more secure.\"",
+        "response": "Don't argue design. Explain ours in plain terms: LastPass encrypts and decrypts the vault on the user's device with AES-256, and derives the key from the master password with PBKDF2-SHA256 at 600,000 iterations. For anything deeper, bring in an SE. Never improvise on cryptography.",
+        "sources": [
+          {
+            "label": "LastPass zero-knowledge security page",
+            "url": "https://www.lastpass.com/security/zero-knowledge-security"
+          }
+        ]
+      }
+    ],
+    "byPersona": [
+      {
+        "persona": "IT admin",
+        "theyCareAbout": "How fast the rollout goes and how much they'll maintain.",
+        "lead": "Directory integrations with Entra ID, Okta, Google Workspace, OneLogin, and Active Directory on Business, and 100+ policies.",
+        "avoid": "Talking about 1Password's provisioning patches. It reads as cheap.",
+        "proofPoint": "Sample customer Harbor & Pike went live in 9 days with Entra ID sync."
+      },
+      {
+        "persona": "Security lead",
+        "theyCareAbout": "Encryption model, audit logs, certifications, and the incident history.",
+        "lead": "The incident answer, word for word, with links. Then the certification list and SIEM integration with Splunk and Microsoft Sentinel.",
+        "avoid": "Saying the incident \"wasn't a big deal\" or adding detail that isn't in LastPass's posts.",
+        "proofPoint": "Offer a security review with an SE and the compliance reports."
+      },
+      {
+        "persona": "Business buyer",
+        "theyCareAbout": "Price per user and whether staff will use it.",
+        "lead": "$7 against $8.99 at their seat count, plus 24/7 phone support.",
+        "avoid": "Leading with features. Lead with cost and adoption.",
+        "proofPoint": "Cost math at their seat count."
+      },
+      {
+        "persona": "End users",
+        "theyCareAbout": "Autofill that works and nothing new to learn.",
+        "lead": "Show the browser extension saving and filling a login in the demo.",
+        "avoid": "Admin screens in a demo for end users.",
+        "proofPoint": "Sample customer Harbor & Pike: 96% active in 30 days."
+      }
+    ]
+  },
+  {
+    "competitorId": "bitwarden",
+    "updatedOn": "2026-11-16",
+    "updatedBySignals": [
+      {
+        "signal": 7,
+        "section": "Objection handling",
+        "change": "New answer to Bitwarden's \"$6 vs $7\" comparison."
+      },
+      {
+        "signal": 9,
+        "section": "Where they win",
+        "change": "Added the LastPass Enterprise migration guide."
+      },
+      {
+        "signal": 4,
+        "section": "Landmine questions",
+        "change": "Added a question about apps outside the vault."
+      }
+    ],
+    "quickDismiss": "Bitwarden is cheaper and open source, and technical teams like it. LastPass is built for the whole company: SSO and 100+ policies on Business, phone support, and an app non-technical staff can use without training.",
+    "whereWeWin": [
+      {
+        "point": "SSO and policies without the top plan",
+        "detail": "Bitwarden puts SSO, enterprise policies, and account recovery on Enterprise ($6). Teams ($4) leaves them out. LastPass Business ($7) includes directory integrations, federated login, and 100+ policies.",
+        "proofType": "Cost math",
+        "proof": "At 120 users: Bitwarden Enterprise $8,640 a year, LastPass Business $10,080. The gap is $1,440 a year, at list prices."
+      },
+      {
+        "point": "Phone support",
+        "detail": "Bitwarden's pricing page lists priority 24/7 email support. LastPass Business includes 24/7 phone, email, and live chat.",
+        "proofType": "Demo moment",
+        "proof": "Show an admin opening a phone support case."
+      },
+      {
+        "point": "Built for non-technical staff",
+        "detail": "LastPass's own comparison describes Bitwarden as built for technical teams and LastPass for small and midsize businesses, including non-technical users.",
+        "proofType": "Customer story",
+        "proof": "Cedar Valley Health Billing switched from Bitwarden after front-office staff kept saving passwords in spreadsheets (sample customer)."
+      }
+    ],
+    "whereTheyWin": [
+      {
+        "point": "Price",
+        "handle": "Agree. Then make sure they compare the same plan, and price the time IT spends supporting staff who don't adopt the tool."
+      },
+      {
+        "point": "Open source and self-hosting",
+        "handle": "If the buyer requires self-hosting, LastPass isn't a fit; LastPass describes itself as closed-source and cloud-based. Qualify that early and move on."
+      },
+      {
+        "point": "An easy path off LastPass at renewal",
+        "handle": "Bitwarden publishes a migration guide for LastPass Enterprise customers. CS leads renewals with adoption numbers before price comes up."
+      }
+    ],
+    "landmines": [
+      "\"Which Bitwarden plan is your quote on? Does it include SSO and admin policies?\"",
+      "\"When someone in accounting gets locked out on a Saturday, how do they get help?\"",
+      "\"What will you see about apps your team uses that were never saved in the vault?\"",
+      "\"Who will train non-technical staff, and how long do you expect adoption to take?\""
+    ],
+    "objections": [
+      {
+        "objection": "\"LastPass had a breach. Why would we trust you with our passwords?\"",
+        "response": "Don't dispute it, and don't add detail. Say what LastPass has published: in 2022 an attacker copied a backup of customer vault data. Passwords and notes in it were encrypted; URLs were not. LastPass says it never stores or knows the master password. Since then, LastPass says it rebuilt its infrastructure on a new cloud platform, rotated secrets and certificates, changed privileged access controls, raised PBKDF2 to 600,000 iterations, and added ISO 27701 to ISO 27001, SOC 2 Type II, SOC 3, and BSI C5. If they ask about 2026: the June incident was at a vendor, Klue, and LastPass says customer vaults were not affected. Then send these links and offer the security review.",
+        "sources": [
+          {
+            "label": "LastPass incident notice, 2022 updates",
+            "url": "https://blog.lastpass.com/posts/notice-of-recent-security-incident"
+          },
+          {
+            "label": "LastPass incident update, Mar 1, 2023",
+            "url": "https://blog.lastpass.com/posts/security-incident-update-recommended-actions"
+          },
+          {
+            "label": "LastPass security FAQ (May 2026 post)",
+            "url": "https://blog.lastpass.com/posts/lastpass-vs-bitwarden"
+          },
+          {
+            "label": "LastPass zero-knowledge security page",
+            "url": "https://www.lastpass.com/security/zero-knowledge-security"
+          },
+          {
+            "label": "LastPass Klue incident response, June 22, 2026",
+            "url": "https://blog.lastpass.com/posts/klue-supply-chain-incident-and-lastpass-response"
+          }
+        ]
+      },
+      {
+        "objection": "\"Bitwarden is $6 everything included. You're $7 plus add-ons.\"",
+        "response": "\"Those are their numbers, and they're right. Let's compare the same thing. $6 is Bitwarden Enterprise; Teams at $4 leaves out SSO and policies. LastPass Business at $7 includes directory integrations, federated login, 100+ policies, and 24/7 phone support. SaaS Monitoring is the add-on, on Business Max at $11, and only if you need it.\"",
+        "sources": [
+          {
+            "label": "Bitwarden comparison page",
+            "url": "https://bitwarden.com/bitwarden-alternatives/"
+          },
+          {
+            "label": "Bitwarden business pricing",
+            "url": "https://bitwarden.com/pricing/business/"
+          },
+          {
+            "label": "LastPass pricing",
+            "url": "https://www.lastpass.com/pricing"
+          }
+        ]
+      },
+      {
+        "objection": "\"Open source means anyone can check Bitwarden's security.\"",
+        "response": "True, and it matters to some teams. LastPass's answer is third-party audits and certifications: ISO 27001, SOC 2 Type II, SOC 3, BSI C5, and ISO 27701. Offer the reports through the security review.",
+        "sources": [
+          {
+            "label": "LastPass security page",
+            "url": "https://www.lastpass.com/security"
+          }
+        ]
+      }
+    ],
+    "byPersona": [
+      {
+        "persona": "IT admin",
+        "theyCareAbout": "Control, scripting, and not babysitting users.",
+        "lead": "Policies scoped to users, groups, or the whole company, and directory sync on Business.",
+        "avoid": "Dismissing open source. Many IT admins value it.",
+        "proofPoint": "Sample customer Cedar Valley: help desk password tickets down 60%."
+      },
+      {
+        "persona": "Security lead",
+        "theyCareAbout": "Auditability and the incident history.",
+        "lead": "The incident answer with links, then certifications and SIEM integration.",
+        "avoid": "Claiming closed source is safer.",
+        "proofPoint": "Security review with an SE."
+      },
+      {
+        "persona": "Business buyer",
+        "theyCareAbout": "Total cost and adoption.",
+        "lead": "Plan-for-plan cost at their seat count, then adoption.",
+        "avoid": "Pretending the price gap doesn't exist.",
+        "proofPoint": "Cost math at their seat count."
+      },
+      {
+        "persona": "MSP",
+        "theyCareAbout": "Managing many clients and billing them cleanly.",
+        "lead": "LastPass's multi-client dashboard and per-client billing reports.",
+        "avoid": "Claims about Bitwarden's provider portal we haven't checked.",
+        "proofPoint": "Sample partner Northgate IT runs 34 client accounts from one dashboard."
+      }
+    ]
+  },
+  {
+    "competitorId": "keeper",
+    "updatedOn": "2026-11-16",
+    "updatedBySignals": [
+      {
+        "signal": 12,
+        "section": "Objection handling",
+        "change": "Added the answer to Keeper's breach and UK fine claims."
+      }
+    ],
+    "quickDismiss": "Keeper's recent announcements aim at government and regulated buyers. For a 50 to 500 person company that needs a password manager its staff will use, show a fast rollout and real adoption: Summit Dental went live across 22 offices with Okta (sample customer).",
+    "whereWeWin": [
+      {
+        "point": "Everything on one plan",
+        "detail": "Keeper lists SIEM integration and compliance reporting as add-ons. LastPass Business includes advanced reporting and SIEM integration with Splunk and Microsoft Sentinel.",
+        "proofType": "Demo moment",
+        "proof": "Show the advanced reports and SIEM settings in the Admin Console."
+      }
+    ],
+    "whereTheyWin": [
+      {
+        "point": "Government certifications",
+        "handle": "Keeper claims FedRAMP High and GovRAMP. If the buyer needs those, qualify out early."
+      }
+    ],
+    "landmines": [
+      "\"Which features in your Keeper quote are add-ons, and what do they cost?\"",
+      "\"Do you need FedRAMP, or a password manager your staff will use?\""
+    ],
+    "objections": [
+      {
+        "objection": "\"LastPass had a breach. Why would we trust you with our passwords?\"",
+        "response": "Don't dispute it, and don't add detail. Say what LastPass has published: in 2022 an attacker copied a backup of customer vault data. Passwords and notes in it were encrypted; URLs were not. LastPass says it never stores or knows the master password. Since then, LastPass says it rebuilt its infrastructure on a new cloud platform, rotated secrets and certificates, changed privileged access controls, raised PBKDF2 to 600,000 iterations, and added ISO 27701 to ISO 27001, SOC 2 Type II, SOC 3, and BSI C5. If they ask about 2026: the June incident was at a vendor, Klue, and LastPass says customer vaults were not affected. Then send these links and offer the security review.",
+        "sources": [
+          {
+            "label": "LastPass incident notice, 2022 updates",
+            "url": "https://blog.lastpass.com/posts/notice-of-recent-security-incident"
+          },
+          {
+            "label": "LastPass incident update, Mar 1, 2023",
+            "url": "https://blog.lastpass.com/posts/security-incident-update-recommended-actions"
+          },
+          {
+            "label": "LastPass security FAQ (May 2026 post)",
+            "url": "https://blog.lastpass.com/posts/lastpass-vs-bitwarden"
+          },
+          {
+            "label": "LastPass zero-knowledge security page",
+            "url": "https://www.lastpass.com/security/zero-knowledge-security"
+          },
+          {
+            "label": "LastPass Klue incident response, June 22, 2026",
+            "url": "https://blog.lastpass.com/posts/klue-supply-chain-incident-and-lastpass-response"
+          }
+        ]
+      },
+      {
+        "objection": "\"Keeper says it's never been breached, and LastPass was fined.\"",
+        "response": "\"Yes, the UK regulator fined LastPass over 2022. Here's what LastPass says it changed since.\" Send the incident links. Never comment on Keeper's own record.",
+        "sources": [
+          {
+            "label": "The Register on the ICO fine, Dec 11, 2025",
+            "url": "https://www.theregister.com/2025/12/11/lastpass_ico_fine/"
+          },
+          {
+            "label": "Keeper vs LastPass page",
+            "url": "https://www.keepersecurity.com/vs/lastpass.html"
+          }
+        ]
+      }
+    ],
+    "byPersona": [
+      {
+        "persona": "Security lead",
+        "theyCareAbout": "Certifications and the incident history.",
+        "lead": "The incident answer with links, then the certification list.",
+        "avoid": "Debating Keeper's claims about itself.",
+        "proofPoint": "Security review with an SE."
+      },
+      {
+        "persona": "Business buyer",
+        "theyCareAbout": "What the quote really includes.",
+        "lead": "Ask which features are add-ons on the Keeper quote.",
+        "avoid": "Guessing Keeper's prices. We couldn't verify them.",
+        "proofPoint": "Side-by-side of what's included on each quote."
+      }
+    ]
+  }
+]

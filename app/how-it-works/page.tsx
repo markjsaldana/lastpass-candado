@@ -1,0 +1,206 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Bot,
+  Hand,
+  Camera,
+  Diff,
+  Globe,
+  Route,
+  Tags,
+  UserCheck,
+  Inbox,
+} from "lucide-react";
+import { ImpactGauge } from "@/components/impact-gauge";
+import { More } from "@/components/more";
+import { PageHeader } from "@/components/page-header";
+import { PipelineTrack } from "@/components/pipeline-track";
+import { WeeklyRun } from "@/components/weekly-run";
+import { competitorName, signalById, signalTypeLabel, sources } from "@/lib/data";
+import { eyebrowFor } from "@/lib/nav";
+
+export const metadata: Metadata = { title: "How it works" };
+
+const automated = [
+  "Checking every public source on schedule",
+  "Saving snapshots and flagging what changed",
+  "Drafting the type, scores, and talk track for each change",
+];
+
+const handsOn = [
+  {
+    title: "Mystery-shop calls",
+    body: "I book sales calls with 1Password and Bitwarden as a prospect to hear how their reps pitch, what they say about LastPass's history, and how they handle price. No changelog shows that.",
+  },
+  {
+    title: "Win-loss interviews",
+    body: "Interviews within 14 days of each decision, with buyers who chose us and buyers who didn't, coded the same way every time.",
+  },
+  {
+    title: "Listening to our own calls",
+    body: "Reviewing competitor mentions in recorded sales calls and sitting in on competitive deals.",
+  },
+  {
+    title: "Reviewing every AI draft",
+    body: "I own the point of view and every line a rep will say to a customer. Anything rated Rumor stays out of talk tracks, and any security claim must match LastPass's published documentation.",
+  },
+];
+
+// The worked example traced through every step below.
+const EXAMPLE_SIGNAL = 1;
+
+export default function Page() {
+  const signal = signalById(EXAMPLE_SIGNAL)!;
+  const source = sources.find((s) => s.id === signal.sourceId)!;
+  const competitor = competitorName(signal.competitorId);
+
+  const steps = [
+    {
+      icon: Globe,
+      title: "Sources",
+      body: "1Password, Bitwarden, and Keeper pricing pages, release notes, blogs, comparison pages, and help centers, plus LastPass's own security pages, review themes, win-loss notes, sales-call mentions, and mystery-shop calls.",
+      trace: `${competitor} ${source.type}, checked ${source.frequency.toLowerCase()}.`,
+    },
+    {
+      icon: Camera,
+      title: "Snapshots",
+      body: "Each page is fetched on a schedule: weekly by default, daily for pricing pages. Blogs come in through their RSS feeds.",
+      trace: "Captured Oct 19 and Nov 2.",
+    },
+    {
+      icon: Diff,
+      title: "Change detection",
+      body: "Compare each snapshot with the last one, line by line. Cosmetic changes like dates, typos, and layout are ignored.",
+      trace: "1 meaningful change: a new SCIM Bridge 2.9.17 entry with a security patch and a move to hosted provisioning. The date stamp change was ignored.",
+    },
+    {
+      icon: Tags,
+      title: "Classify & score",
+      body: "AI does the first pass, then I review it. Each change gets a type, the buyers it affects, and scores for deal impact, urgency, and confidence. Security claims get a second review against LastPass's published documentation.",
+      trace: `${signalTypeLabel(signal.type)} · Impact ${signal.impact}/5 · ${signal.personas.join(", ")} · ${signal.confidence}.`,
+    },
+    {
+      icon: Route,
+      title: "Route",
+      body: "High-impact items go to Sales the same day. Roadmap gaps go to Product. Messaging items go to PMM and the website. Partner items go to partner managers.",
+      trace: `${signal.urgency} → ${signal.owners.join(" + ")}.`,
+    },
+    {
+      icon: Inbox,
+      title: "Outputs",
+      body: "Weekly digest, the So what for each team, live battlecards, the comparison matrix, and alerts for urgent shifts.",
+      trace: "A digest line for SEs and a new discovery question on the 1Password card about who maintains provisioning. No comment on the CVEs.",
+    },
+  ];
+
+  return (
+    <>
+      <PageHeader
+        eyebrow={eyebrowFor("/how-it-works")}
+        title="From competitor change to sales-ready intel"
+        lede="The assistant answers from this weekly run. Every Monday it checks 1Password, Bitwarden, and Keeper pages and blogs, finds what changed, and drafts what it means. A person reviews every change before it reaches a rep."
+        sample
+      />
+
+      <WeeklyRun />
+
+      <More label="Follow one change through every step" hint="A 1Password release note, from fetch to battlecard">
+      {/* Flow strip: the whole pipeline at a glance, following the reader down the page. */}
+      <PipelineTrack titles={steps.map((s) => s.title)} signalId={signal.id} />
+
+      <div className="mt-6 flex flex-wrap items-baseline gap-x-2 text-sm text-muted">
+        <span className="font-medium text-fg">Follow one change through:</span>
+        <span>
+          Signal #{signal.id}, {signal.change}
+        </span>
+      </div>
+
+      <ol className="relative mt-6 space-y-4">
+        {steps.map(({ icon: Icon, title, body, trace }, i) => (
+          <li
+            key={title}
+            id={`step-${i + 1}`}
+            className="relative grid scroll-mt-32 gap-4 rounded-xl border border-line bg-surface p-5 md:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] md:gap-8"
+          >
+            <div className="flex gap-4">
+              <span className="grid size-10 shrink-0 place-items-center rounded-lg bg-accent-soft text-accent">
+                <Icon className="size-5" aria-hidden />
+              </span>
+              <div>
+                <h2 className="font-semibold">
+                  <span className="mr-2 font-mono text-xs text-muted">{String(i + 1).padStart(2, "0")}</span>
+                  {title}
+                </h2>
+                <p className="mt-1 text-sm text-pretty text-muted">{body}</p>
+              </div>
+            </div>
+            <div className="rounded-lg border border-dashed border-line bg-surface-2 px-4 py-3 text-sm">
+              <p className="font-mono text-[11px] tracking-wide text-muted uppercase">Signal #{signal.id}</p>
+              <p className="mt-1 text-pretty">{trace}</p>
+              {i === 3 ? (
+                <div className="mt-3 border-t border-line pt-3">
+                  <ImpactGauge impact={signal.impact} label={`Deal impact · ${signal.urgency}`} />
+                </div>
+              ) : null}
+            </div>
+          </li>
+        ))}
+      </ol>
+      </More>
+
+      <More label="The work page checks can't do" hint="Mystery-shop calls, win-loss interviews, and call listening">
+      <section className="rounded-xl border border-accent/30 bg-accent-soft p-6">
+        <h2 className="flex items-center gap-2 font-semibold">
+          <UserCheck className="size-5 text-accent" aria-hidden />
+          Automation plus hands-on work
+        </h2>
+        <p className="mt-1 max-w-3xl text-pretty">
+          Page checks cover the public record. The intel reps trust most comes from talking to people.
+        </p>
+        <div className="mt-5 grid gap-4 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
+          <div className="rounded-lg bg-surface p-4">
+            <h3 className="flex items-center gap-2 text-sm font-semibold">
+              <Bot className="size-4 text-muted" aria-hidden />
+              Automated
+            </h3>
+            <ul className="mt-3 space-y-2 text-sm text-muted">
+              {automated.map((item) => (
+                <li key={item} className="text-pretty">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-lg bg-surface p-4">
+            <h3 className="flex items-center gap-2 text-sm font-semibold">
+              <Hand className="size-4 text-accent" aria-hidden />
+              Hands-on, by me
+            </h3>
+            <ul className="mt-3 space-y-3 text-sm">
+              {handsOn.map((item) => (
+                <li key={item.title} className="text-pretty">
+                  <span className="font-medium">{item.title}.</span> <span className="text-muted">{item.body}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 border-t border-line pt-3 text-xs text-pretty text-muted">
+              Mystery-shop calls run within legal&apos;s guidelines. I never ask for confidential information, and
+              notes are shared as themes, not recordings.
+            </p>
+          </div>
+        </div>
+      </section>
+      </More>
+
+      <div className="mt-10">
+        <Link
+          href="/inputs"
+          className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-accent-fg transition-opacity hover:opacity-90"
+        >
+          See the inputs and what changed <ArrowRight className="size-4" aria-hidden />
+        </Link>
+      </div>
+    </>
+  );
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "feature",
+    "label": "Feature launch",
+    "description": "A new or expanded capability that overlaps with ours, or a change an IT admin will notice in a rollout.",
+    "example": "A provisioning change that affects how users get added from Okta or Entra ID."
+  },
+  {
+    "id": "pricing",
+    "label": "Pricing / packaging change",
+    "description": "Per-user prices, seat minimums, and which plan a feature sits on. We record what the page says and never estimate a price.",
+    "example": "SSO moved from the top plan to the middle plan."
+  },
+  {
+    "id": "positioning",
+    "label": "Comparison claim / messaging",
+    "description": "New claims about LastPass, new target buyers, or new headlines. Comparison pages get read line by line.",
+    "example": "A competitor's LastPass page adds a line about our certifications."
+  },
+  {
+    "id": "security",
+    "label": "Security model or certification",
+    "description": "Encryption changes, audits, certifications, and incident disclosures. These get a second review before anything reaches a rep.",
+    "example": "A competitor announces a new certification or changes its encryption."
+  },
+  {
+    "id": "ai",
+    "label": "AI and agent access",
+    "description": "Features for AI agents, or AI inside the product.",
+    "example": "A competitor gives AI agents scoped access to credentials."
+  },
+  {
+    "id": "analyst",
+    "label": "Analyst recognition",
+    "description": "Analyst reports and rankings that buyers quote in evaluations.",
+    "example": "A competitor is named in an analyst quadrant."
+  },
+  {
+    "id": "review",
+    "label": "Review theme",
+    "description": "Recurring praise or complaints from IT admins and end users on public review sites.",
+    "example": "Several reviews mention a hard first-week rollout."
+  },
+  {
+    "id": "partner",
+    "label": "MSP or partner change",
+    "description": "Changes to how a competitor sells through managed service providers.",
+    "example": "A competitor adds multi-tenant billing for MSPs."
+  },
+  {
+    "id": "winloss",
+    "label": "Win-loss / call mention",
+    "description": "What buyers and reps tell us. Internal, so it carries no public citation.",
+    "example": "A security lead raised the 2022 incident in three first calls this week."
+  }
+]

@@ -1,0 +1,28 @@
+Maplewood Accounting Group <> LastPass | Evaluation call | 2026-11-16 | 44 min
+Exported from the call recorder. Sample transcript, invented for illustration.
+
+Speakers:
+  Tom Becker, CFO, Maplewood Accounting Group
+  Ana Ruiz, IT admin, Maplewood Accounting Group
+  Wes Carter, Security lead, Maplewood Accounting Group
+  Jordan Lee, Account Executive, LastPass
+  Sam Okafor, Solutions Engineer, LastPass
+
+[00:01:10] Jordan Lee: Thanks for the time. Last week you said the insurer wants a password manager by January. What's changed?
+[00:01:45] Tom Becker: Nothing, except January is closer. We're 120 people and tax season starts right after.
+[00:02:30] Wes Carter: I'll be direct. I read about your 2022 breach, and that's the first thing my board will ask me about.
+[00:04:05] Ana Ruiz: It's me and one contractor. If this takes more than two weeks to roll out, it doesn't happen before tax season.
+[00:05:20] Ana Ruiz: Everyone signs in with Microsoft today. I need accounts created from Entra, not by hand.
+[00:07:40] Tom Becker: Half our staff still keep client portal passwords in a spreadsheet. If they won't use it, I'm paying for nothing.
+[00:09:15] Wes Carter: 1Password's site says you've had multiple incidents involving vault data. I need to know what's different now.
+[00:11:30] Tom Becker: 1Password is the safer name, but it costs more per person. I need to justify either one.
+[00:14:00] Sam Okafor: What would a good answer on the security side look like for you?
+[00:14:40] Wes Carter: Written answers I can hand to the board. Not a sales pitch.
+[00:17:25] Wes Carter: And how does SSO work with the master password? If we sign in with Microsoft, where does the key live?
+[00:19:50] Ana Ruiz: Can you show me what happens when someone leaves the firm?
+[00:23:10] Tom Becker: Our staff aren't technical. The partners won't sit through training.
+[00:26:45] Wes Carter: I'll need your compliance reports for the questionnaire.
+[00:31:20] Ana Ruiz: If we did Entra sync, how many days to get everyone live?
+[00:36:05] Tom Becker: Send me something I can forward to the partners.
+[00:41:30] Jordan Lee: Next step is a technical session Thursday with Sam, and written security answers for Wes before then.
+[00:43:50] Tom Becker: Thursday works.

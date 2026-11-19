@@ -1,0 +1,160 @@
+// Cross-file checks the type system can't express: every reference points at
+// something that exists. Run with `npm run check:data`.
+import { readFileSync } from "node:fs";
+
+const load = (f) => JSON.parse(readFileSync(new URL(`../data/${f}`, import.meta.url)));
+const competitors = new Set(load("competitors.json").map((c) => c.id).concat("category"));
+const sources = load("sources.json");
+const sourceIds = new Set(sources.map((s) => s.id));
+const types = new Set(load("signal_types.json").map((t) => t.id));
+const signals = load("signals.json");
+const signalIds = new Set(signals.map((s) => s.id));
+const errors = [];
+
+const enums = {
+  tier: ["Primary", "Secondary", "Watch"],
+  persona: ["IT admin", "Security lead", "Business buyer", "MSP", "End users"],
+  confidence: ["Confirmed", "Likely", "Rumor"],
+  urgency: ["Alert now", "This week's digest", "Monthly review"],
+  owner: ["Sales", "SDRs", "Sales leadership", "PMM", "Product", "Website", "CS", "Enablement"],
+  status: ["Alert sent", "Talk track shipped", "In review", "Gap logged", "Page updated", "Logged"],
+  region: ["West", "Southwest", "Midwest", "Southeast", "Northeast", "Canada"],
+  size: ["Under 50", "50 to 249", "250 to 500"],
+  useCase: ["SSO rollout", "Directory sync", "Compliance & audit", "MSP", "Shared credentials", "Offboarding", "Adoption"],
+  mark: ["yes", "partial", "no", "unchecked"],
+  outcome: ["Switched from", "Chose over"],
+  referenceStatus: ["Available", "Limited", "Resting"],
+  format: ["Reference call", "Peer email", "Site visit", "Webinar"],
+  visibility: ["Public", "Internal only"],
+  proofType: ["Customer story", "Demo moment", "Cost math"],
+};
+const checkEnum = (where, kind, value) => {
+  if (!enums[kind].includes(value)) errors.push(`${where}: invalid ${kind} "${value}"`);
+};
+
+for (const c of load("competitors.json")) {
+  checkEnum(`competitor ${c.id}`, "tier", c.tier);
+  c.competesFor.forEach((p) => checkEnum(`competitor ${c.id}`, "persona", p));
+}
+
+for (const s of sources) if (!competitors.has(s.competitorId)) errors.push(`source ${s.id}: unknown competitor ${s.competitorId}`);
+for (const s of signals) {
+  if (!competitors.has(s.competitorId)) errors.push(`signal ${s.id}: unknown competitor ${s.competitorId}`);
+  if (!sourceIds.has(s.sourceId)) errors.push(`signal ${s.id}: unknown source ${s.sourceId}`);
+  if (!types.has(s.type)) errors.push(`signal ${s.id}: unknown type ${s.type}`);
+  if (![1, 2, 3, 4, 5].includes(s.impact)) errors.push(`signal ${s.id}: impact must be 1-5`);
+  checkEnum(`signal ${s.id}`, "confidence", s.confidence);
+  checkEnum(`signal ${s.id}`, "urgency", s.urgency);
+  checkEnum(`signal ${s.id}`, "status", s.status);
+  s.personas.forEach((p) => checkEnum(`signal ${s.id}`, "persona", p));
+  s.owners.forEach((o) => checkEnum(`signal ${s.id}`, "owner", o));
+  // Public signals must cite a page; internal ones must not pretend to.
+  const internal = sources.find((x) => x.id === s.sourceId)?.internal;
+  if (!internal && !s.citation?.url?.startsWith("https://")) errors.push(`signal ${s.id}: public signal needs a citation url`);
+}
+// Every competitor fact links to its source.
+for (const c of load("competitors.json"))
+  for (const f of c.facts) if (!f.url?.startsWith("https://")) errors.push(`competitor ${c.id}: fact without url`);
+// Matrix: valid marks, and every claim (not "unchecked") about a real company has a source url.
+for (const g of load("matrix.json").groups) {
+  checkEnum(`matrix ${g.persona}`, "persona", g.persona);
+  for (const cap of g.capabilities)
+    for (const [id, cell] of Object.entries(cap.cells)) {
+      checkEnum(`matrix ${cap.name}/${id}`, "mark", cell.mark);
+      if (cell.mark !== "unchecked" && !cell.url?.startsWith("https://")) errors.push(`matrix ${cap.name}/${id}: claim without url`);
+    }
+}
+// Every battlecard carries the incident-history objection, answered with cited LastPass statements.
+for (const b of load("battlecards.json")) {
+  const incident = b.objections.find((o) => /incident|breach/i.test(o.objection));
+  if (!incident) errors.push(`battlecard ${b.competitorId}: missing incident-history objection`);
+  else if (!incident.sources?.length) errors.push(`battlecard ${b.competitorId}: incident answer has no sources`);
+}
+const digest = load("digest.json");
+const refs = [
+  ...digest.topForSales,
+  ...digest.trends.flatMap((t) => t.signals),
+  ...load("battlecards.json").flatMap((b) => b.updatedBySignals.map((u) => u.signal)),
+  ...load("so_what.json").audiences.flatMap((a) => a.items.flatMap((i) => i.signals)),
+  ...load("routing_log.json").entries.map((e) => e.signal),
+];
+for (const id of refs) if (!signalIds.has(id)) errors.push(`reference to missing signal #${id}`);
+
+const customers = load("customers.json");
+const customerIds = new Set(customers.map((c) => c.id));
+for (const c of customers) {
+  const where = `customer ${c.id}`;
+  checkEnum(where, "region", c.region);
+  checkEnum(where, "size", c.size);
+  c.useCases.forEach((u) => checkEnum(where, "useCase", u));
+  if (c.competitor) {
+    if (!competitors.has(c.competitor.id)) errors.push(`${where}: unknown competitor ${c.competitor.id}`);
+    checkEnum(where, "outcome", c.competitor.outcome);
+  }
+  if (c.reference) {
+    checkEnum(where, "referenceStatus", c.reference.status);
+    c.reference.personas.forEach((p) => checkEnum(where, "persona", p));
+    c.reference.formats.forEach((f) => checkEnum(where, "format", f));
+  }
+}
+const caseStudies = load("case_studies.json");
+const caseStudyIds = new Set(caseStudies.map((c) => c.id));
+for (const cs of caseStudies) {
+  if (!customerIds.has(cs.customerId)) errors.push(`case study ${cs.id}: unknown customer ${cs.customerId}`);
+  checkEnum(`case study ${cs.id}`, "visibility", cs.visibility);
+  cs.useCases.forEach((u) => checkEnum(`case study ${cs.id}`, "useCase", u));
+}
+
+// The deal assistant demo: every quote must come from the sample transcript,
+// and every resource must link to something that exists.
+const demo = load("transcript_demo.json");
+const transcript = readFileSync(new URL(`../${demo.file.path}`, import.meta.url), "utf8");
+const battlecards = load("battlecards.json");
+for (const b of battlecards) {
+  if (!competitors.has(b.competitorId)) errors.push(`battlecard: unknown competitor ${b.competitorId}`);
+  b.byPersona.forEach((p) => checkEnum(`battlecard ${b.competitorId}`, "persona", p.persona));
+  b.whereWeWin.forEach((w) => checkEnum(`battlecard ${b.competitorId}`, "proofType", w.proofType));
+}
+// The demo's objection numbers point into the battlecard for the prospect's competitor.
+const objections = battlecards.find((b) => b.competitorId === demo.prospect.competitorId)?.objections ?? [];
+const rank = (where, n, list) => {
+  if (!Number.isInteger(n) || n < 1 || n > list.length) errors.push(`${where}: no rank ${n}`);
+};
+if (!competitors.has(demo.prospect.competitorId)) errors.push(`demo: unknown competitor ${demo.prospect.competitorId}`);
+demo.prospect.personas.forEach((p) => checkEnum("demo prospect", "persona", p));
+for (const c of demo.concerns) {
+  if (!transcript.includes(c.quote)) errors.push(`demo concern "${c.concern}": quote not in transcript`);
+  if (c.objection !== undefined && !objections[c.objection]) errors.push(`demo concern "${c.concern}": no objection ${c.objection}`);
+}
+for (const r of demo.resources) {
+  const ok =
+    r.kind === "caseStudy"
+      ? caseStudyIds.has(r.ref)
+      : r.kind === "reference"
+        ? Boolean(customers.find((c) => c.id === r.ref)?.reference)
+        : r.kind === "objection" && Boolean(objections[Number(r.ref)]);
+  if (!ok) errors.push(`demo resource ${r.kind} ${r.ref}: not found`);
+  r.addresses.forEach((n) => rank(`demo resource ${r.ref}`, n, demo.concerns));
+}
+demo.form.concerns.forEach((n) => rank("demo form concerns", n, demo.concerns));
+for (const [where, email] of [["demo email", demo.email], ["demo form email", demo.form.email]]) {
+  for (const p of email.paragraphs) {
+    if (p.resource === undefined) continue;
+    rank(where, p.resource, demo.resources);
+    // Emails go to the customer, so they can only link public case studies.
+    const r = demo.resources[p.resource - 1];
+    const cs = r?.kind === "caseStudy" && caseStudies.find((c) => c.id === r.ref);
+    if (!cs || cs.visibility !== "Public") errors.push(`${where}: resource ${p.resource} is not a public case study`);
+  }
+}
+demo.form.resources.forEach((n) => rank("demo form resources", n, demo.resources));
+for (const n of demo.form.resources) {
+  const r = demo.resources[n - 1];
+  if (r && !r.addresses.some((c) => demo.form.concerns.includes(c))) errors.push(`demo form resource ${n}: answers no form concern`);
+}
+
+if (errors.length) {
+  console.error(errors.join("\n"));
+  process.exit(1);
+}
+console.log(`data ok: ${competitors.size - 1} competitors, ${sources.length} sources, ${signals.length} signals, ${customers.length} customers, ${caseStudies.length} case studies`);

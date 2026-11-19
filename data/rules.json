@@ -1,0 +1,131 @@
+{
+  "dealImpact": [
+    {
+      "score": 5,
+      "label": "Changes what a rep says in active deals today"
+    },
+    {
+      "score": 4,
+      "label": "Weakens or strengthens a core differentiator"
+    },
+    {
+      "score": 3,
+      "label": "Worth knowing for upcoming evaluations"
+    },
+    {
+      "score": 2,
+      "label": "Context for PMM and Product, not reps"
+    },
+    {
+      "score": 1,
+      "label": "Log it, no action"
+    }
+  ],
+  "personas": [
+    {
+      "id": "IT admin",
+      "needs": "A rollout that's done in weeks: SSO, directory sync, provisioning, and policies that work on day one"
+    },
+    {
+      "id": "Security lead",
+      "needs": "Proof of the security model: encryption, zero-knowledge design, audit logs, certifications, and how the vendor handled incidents"
+    },
+    {
+      "id": "Business buyer",
+      "needs": "A fair price per user, low risk to the business, and a tool non-technical staff will use (owner, CFO, or ops leader)"
+    },
+    {
+      "id": "MSP",
+      "needs": "Many clients from one console, clean per-client billing, and a margin worth the effort"
+    },
+    {
+      "id": "End users",
+      "needs": "Autofill that works and nothing to learn. If they don't use it, nothing else matters"
+    }
+  ],
+  "urgency": [
+    {
+      "id": "Alert now",
+      "when": "Impact 4–5 and Confirmed or Likely. Goes to the sales alert channel the same day."
+    },
+    {
+      "id": "This week's digest",
+      "when": "Impact 3, or impact 4–5 that is still a Rumor."
+    },
+    {
+      "id": "Monthly review",
+      "when": "Impact 1–2. Rolled into the monthly competitive review."
+    }
+  ],
+  "confidence": [
+    {
+      "id": "Confirmed",
+      "when": "Official source: pricing page, release notes, help center, comparison page, or company announcement. Linked in the signal."
+    },
+    {
+      "id": "Likely",
+      "when": "Strong indirect evidence: several call mentions, win-loss interviews, review themes."
+    },
+    {
+      "id": "Rumor",
+      "when": "Single anecdote or unverified report. Never goes into a talk track."
+    }
+  ],
+  "routing": [
+    {
+      "when": "Impact 4–5",
+      "to": [
+        "Sales",
+        "PMM"
+      ],
+      "action": "Sales alert + battlecard update"
+    },
+    {
+      "when": "Any claim about encryption, compliance, or incidents",
+      "to": [
+        "PMM",
+        "Product"
+      ],
+      "action": "Second review against LastPass's published security pages before it reaches a rep. No match, no talk track."
+    },
+    {
+      "when": "Pricing or comparison page change",
+      "to": [
+        "SDRs",
+        "Website"
+      ],
+      "action": "Outreach angle in the So what + comparison page review"
+    },
+    {
+      "when": "Roadmap gap",
+      "to": [
+        "Product"
+      ],
+      "action": "Gap review with the owning PM"
+    },
+    {
+      "when": "Review theme or switch risk",
+      "to": [
+        "PMM",
+        "CS"
+      ],
+      "action": "Proof points for PMM, renewal talking points for CS"
+    },
+    {
+      "when": "Win-loss pattern",
+      "to": [
+        "Sales leadership",
+        "PMM"
+      ],
+      "action": "Question added to next month's win-loss interviews"
+    },
+    {
+      "when": "MSP or partner change",
+      "to": [
+        "CS",
+        "PMM"
+      ],
+      "action": "Partner managers get the angle and the demo to run"
+    }
+  ]
+}
