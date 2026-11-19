@@ -1,4 +1,4 @@
-export const siteName = "Lockstep";
+export const siteName = "Candado";
 
 // What the site is, in a few words, for the header, footer, and page titles.
 export const siteTagline = "Sales enablement plan for LastPass";
@@ -7,11 +7,11 @@ export const siteTagline = "Sales enablement plan for LastPass";
 export const company = "LastPass";
 export const companyId = "lastpass";
 
-// In production Lockstep runs every Monday morning. The sample data reflects this run.
+// In production Candado runs every Monday morning. The sample data reflects this run.
 export const lastRun = "2026-11-16";
 
 export const siteDescription =
-  "Lockstep: the sales enablement assistant I'd build as a PMM at LastPass. Reps use it at every stage of the deal, with weekly intel on 1Password, Bitwarden, and Keeper. Sample data.";
+  "Candado: the sales enablement assistant I'd build as a PMM at LastPass. Reps use it at every stage of the deal, with weekly intel on 1Password, Bitwarden, and Keeper. Sample data.";
 
 export const personName = "Mark Saldaña";
 

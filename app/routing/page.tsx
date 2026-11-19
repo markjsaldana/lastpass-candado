@@ -31,7 +31,7 @@ export default function Page() {
       <PageHeader
         eyebrow={eyebrowFor("/routing")}
         title="Where intel went and what it changed"
-        lede="Lockstep is judged by what changes after a signal goes out: in deals, in pipeline, on the roadmap, and on the website."
+        lede="Candado is judged by what changes after a signal goes out: in deals, in pipeline, on the roadmap, and on the website."
         sample
       />
 

@@ -173,7 +173,7 @@ export default function Page() {
       <section className="mx-auto mt-12 max-w-3xl rounded-xl border border-line bg-surface-2 p-6 text-center">
         <p className="font-mono text-xs tracking-wide text-muted uppercase">How I&apos;ll roll it out</p>
         <p className="mt-3 text-pretty">
-          In my first 90 days: battlecards for 1Password and Bitwarden by day 30, Lockstep every Monday by day 35, a
+          In my first 90 days: battlecards for 1Password and Bitwarden by day 30, Candado every Monday by day 35, a
           win-loss interview program by day 45, and a deal assistant pilot by day 75.{" "}
           <Link href="/plan" className="font-medium text-accent hover:underline">
             See the 90-day plan

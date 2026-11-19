@@ -3,7 +3,7 @@ import { competitorName, routingLog } from "@/lib/data";
 const money = (n: number) =>
   n >= 1_000_000 ? `$${(n / 1_000_000).toFixed(2)}M` : `$${Math.round(n / 1000).toLocaleString("en-US")}K`;
 
-// How I'd report contribution to pipeline: deals where reps used Lockstep content, by competitor.
+// How I'd report contribution to pipeline: deals where reps used Candado content, by competitor.
 export function PipelineInfluenced() {
   const { quarter, note, rows } = routingLog.pipeline;
   const total = rows.reduce((n, r) => n + r.pipeline, 0);
@@ -17,7 +17,7 @@ export function PipelineInfluenced() {
       </div>
       <p className="mt-1 text-sm text-pretty text-muted">
         {quarter}. Open and closed deals with a competitor tagged in the CRM where a rep used a battlecard, the deal
-        assistant, or the trust pack. Win rate compares deals that used Lockstep content with those that didn&apos;t.
+        assistant, or the trust pack. Win rate compares deals that used Candado content with those that didn&apos;t.
       </p>
 
       <dl className="mt-4 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line">
@@ -42,11 +42,11 @@ export function PipelineInfluenced() {
                   {money(r.pipeline)} · {r.opps} opps · {r.won} won, {r.lost} lost
                 </span>
               </div>
-              {/* Win rate without and with Lockstep content, on one 0 to 100% track. */}
+              {/* Win rate without and with Candado content, on one 0 to 100% track. */}
               <div className="mt-2 space-y-1.5" aria-label={`Win rate ${r.winRateBefore}% without, ${r.winRateAfter}% with`}>
                 {[
                   { label: "Without", value: r.winRateBefore, tone: "bg-muted/40" },
-                  { label: "With Lockstep", value: r.winRateAfter, tone: "bg-accent" },
+                  { label: "With Candado", value: r.winRateAfter, tone: "bg-accent" },
                 ].map((bar) => (
                   <div key={bar.label} className="grid grid-cols-[6.5rem_1fr_2.5rem] items-center gap-2 text-xs">
                     <span className="text-muted">{bar.label}</span>

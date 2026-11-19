@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lockstep pipeline: snapshot -> diff -> classify -> signals.
+"""Candado pipeline: snapshot -> diff -> classify -> signals.
 
 How the real version runs each week:
   1. Fetch every public source in data/sources.json.

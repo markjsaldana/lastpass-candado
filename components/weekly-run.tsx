@@ -82,7 +82,7 @@ const needs = [
   "About half a day of my time each Monday",
   "A GitHub repo with a scheduled job",
   "A language model API key, stored as a repo secret",
-  "Read-only exports from the call recorder and the CRM, not standing OAuth tokens. LastPass's June 2026 incident came through a vendor's OAuth tokens, so Lockstep holds none.",
+  "Read-only exports from the call recorder and the CRM, not standing OAuth tokens. LastPass's June 2026 incident came through a vendor's OAuth tokens, so Candado holds none.",
 ];
 
 export function WeeklyRun() {

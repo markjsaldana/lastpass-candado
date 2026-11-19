@@ -62,7 +62,7 @@ function BattlecardView({ card }: { card: Battlecard }) {
       <aside className="rounded-xl border border-accent/30 bg-accent-soft p-4">
         <p className="flex flex-wrap items-center gap-2 text-sm font-semibold text-accent">
           <Radar className="size-4" aria-hidden />
-          Last updated by Lockstep · {formatLongDate(card.updatedOn)}
+          Last updated by Candado · {formatLongDate(card.updatedOn)}
         </p>
         <ul className="mt-3 space-y-2 text-sm">
           {card.updatedBySignals.map((u) => (
@@ -197,7 +197,7 @@ export default function Page() {
       <PageHeader
         eyebrow={eyebrowFor("/battlecard")}
         title={`${company} vs. 1Password, Bitwarden, and Keeper`}
-        lede="One card per competitor, short enough to use mid-call. Lockstep updates them every week. The incident answer is the same on every card, and every line of it links to what LastPass has published."
+        lede="One card per competitor, short enough to use mid-call. Candado updates them every week. The incident answer is the same on every card, and every line of it links to what LastPass has published."
         sample
       />
       <HashTabs

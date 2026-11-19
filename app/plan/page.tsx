@@ -12,7 +12,7 @@ export const metadata: Metadata = { title: "90-day plan" };
 const milestones = [
   { day: 10, label: "Sat in on 20 sales calls" },
   { day: 30, label: "1Password and Bitwarden battlecards live" },
-  { day: 35, label: "First Monday Lockstep" },
+  { day: 35, label: "First Monday Candado" },
   { day: 45, label: "Win-loss interviews start" },
   { day: 60, label: "Comparison pages updated" },
   { day: 75, label: "Deal assistant pilot starts" },
@@ -31,7 +31,7 @@ const phases = [
       "Collect every published LastPass statement on security and incidents into one approved library with Legal and Security, so reps have one sourced answer.",
       "Pull CRM data to see where we lose to each competitor, by segment and by which buyer decided.",
     ],
-    ships: "v1 battlecards for 1Password and Bitwarden with the approved incident answer, a write-up of what customers told me, and the source list Lockstep will track.",
+    ships: "v1 battlecards for 1Password and Bitwarden with the approved incident answer, a write-up of what customers told me, and the source list Candado will track.",
     done: "Reps are using both battlecards on live calls, and nobody improvises the incident answer.",
   },
   {
@@ -45,8 +45,8 @@ const phases = [
       "Refresh our 1Password and Bitwarden comparison pages with the web team and Legal by day 60.",
       "Build a lighter Keeper card, and start logging Dashlane and NordPass mentions.",
     ],
-    ships: "Lockstep every Monday, the So what, the alert channel, the first coded win-loss findings, and updated comparison pages.",
-    done: "Lockstep goes out every Monday without me chasing anyone for it.",
+    ships: "Candado every Monday, the So what, the alert channel, the first coded win-loss findings, and updated comparison pages.",
+    done: "Candado goes out every Monday without me chasing anyone for it.",
   },
   {
     days: "Days 61–90",
@@ -76,8 +76,8 @@ export default function Page() {
     <>
       <PageHeader
         eyebrow={eyebrowFor("/plan")}
-        title="How I'll build and ship Lockstep in my first 90 days"
-        lede="Listen first, make it weekly, then prove it moves win rates and pipeline. By day 90, Lockstep goes out every Monday, win-loss interviews are running, and a group of reps is piloting the deal assistant."
+        title="How I'll build and ship Candado in my first 90 days"
+        lede="Listen first, make it weekly, then prove it moves win rates and pipeline. By day 90, Candado goes out every Monday, win-loss interviews are running, and a group of reps is piloting the deal assistant."
       />
 
       {/* 90 days as one strip, with each milestone placed by its day. */}
@@ -191,7 +191,7 @@ export default function Page() {
       <blockquote className="mx-auto mt-12 max-w-3xl rounded-xl bg-fg p-8 text-center text-bg">
         <p className="text-xl leading-relaxed font-medium text-balance">
           Competitive intel pays off when it changes what a rep says on the next call. That&apos;s the bar I&apos;ll
-          hold Lockstep to.
+          hold Candado to.
         </p>
         <footer className="mt-4 text-sm opacity-70">{personName}</footer>
       </blockquote>

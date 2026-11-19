@@ -128,7 +128,7 @@ export function CoverageHeatmap() {
             {hovered.map((s) => `${s.frequency.toLowerCase()}, looking for ${s.lookFor.toLowerCase()}`).join("; ")}.
           </>
         ) : (
-          "Hover a square to see what Lockstep looks for there."
+          "Hover a square to see what Candado looks for there."
         )}
       </p>
     </div>

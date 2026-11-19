@@ -50,8 +50,8 @@ export default function Page() {
     <>
       <PageHeader
         eyebrow={eyebrowFor("/inputs")}
-        title="What Lockstep watches, and the rules it follows"
-        lede="Who Lockstep watches, which pages it checks, and how it scores what changed."
+        title="What Candado watches, and the rules it follows"
+        lede="Who Candado watches, which pages it checks, and how it scores what changed."
         sample
       />
 
@@ -126,7 +126,7 @@ export default function Page() {
 
       <Section
         index={1}
-        lede={`${sources.length} sources: competitor pages and blogs checked weekly (pricing pages daily), LastPass's own security pages, and internal notes from sales and CS. Pick one to see what Lockstep checks. Two have saved before-and-after versions, so you can see exactly what changed and the signal it produced.`}
+        lede={`${sources.length} sources: competitor pages and blogs checked weekly (pricing pages daily), LastPass's own security pages, and internal notes from sales and CS. Pick one to see what Candado checks. Two have saved before-and-after versions, so you can see exactly what changed and the signal it produced.`}
       >
         <CoverageHeatmap />
         <div className="mt-6">

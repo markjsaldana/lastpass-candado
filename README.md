@@ -1,6 +1,6 @@
-# Lockstep
+# Candado
 
-Lockstep is the sales enablement assistant I'd build as a product marketing manager at LastPass, and this site shows how I'd build and ship it in my first 90 days. SDRs, AEs, and SEs use it at every stage of the deal, including the security review. It answers from weekly competitive intel on 1Password, Bitwarden, and Keeper, from battlecards and win-loss interviews, and from LastPass's own published security pages, and it cites a source for every line.
+Candado is the sales enablement assistant I'd build as a product marketing manager at LastPass, and this site shows how I'd build and ship it in my first 90 days. SDRs, AEs, and SEs use it at every stage of the deal, including the security review. It answers from weekly competitive intel on 1Password, Bitwarden, and Keeper, from battlecards and win-loss interviews, and from LastPass's own published security pages, and it cites a source for every line.
 
 An independent work sample by Mark Saldaña. Not affiliated with or endorsed by LastPass, 1Password, Bitwarden, or Keeper.
 
@@ -21,7 +21,7 @@ Everything the UI shows comes from JSON in `/data`, so swapping sample data for 
 | --- | --- |
 | `competitors.json` | Competitors, tiers, buyers, "why they win" hypotheses, sourced facts |
 | `sources.json` | What gets monitored, how often, and what we look for |
-| `signal_types.json` | The nine kinds of change Lockstep classifies |
+| `signal_types.json` | The nine kinds of change Candado classifies |
 | `rules.json` | Deal-impact scoring, urgency, confidence, routing table |
 | `signals.json` | Scored signals across three weeks; public ones carry a citation |
 | `digest.json` | This week's top 3, trends, and win-loss questions |
@@ -42,7 +42,7 @@ Vercel, framework preset Next.js. The site is `noindex` and blocked in `robots.t
 
 ## The pipeline (`scripts/radar.py`)
 
-The site shows Lockstep's output. `scripts/radar.py` shows how it gets made:
+The site shows Candado's output. `scripts/radar.py` shows how it gets made:
 
 1. **Fetch** each public source in `data/sources.json` (`--live`).
 2. **Snapshot** it to a dated file.

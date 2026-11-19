@@ -60,7 +60,7 @@ const buildSteps = [
     body: "The rep uploads the call transcript, or fills in a six-field form when there's no recording. The transcript is the recommended path: concerns come ranked by what the buyer said, with the quotes to prove it.",
   },
   {
-    title: "Ground it in Lockstep",
+    title: "Ground it in Candado",
     body: "It answers only from the battlecards, signals, matrix, win-loss notes, LastPass's published security pages, and the reference library, and every line cites where it came from. When the library has no answer, it says so and routes the question.",
   },
   {
@@ -156,7 +156,7 @@ export default function Page() {
                 <p className="mt-4 px-2 text-xs font-medium text-muted">Apps</p>
                 <p className="mt-1 flex items-center gap-1.5 px-2 py-1 text-muted">
                   <span className="size-2 rounded-full bg-good" />
-                  Lockstep
+                  Candado
                 </p>
               </aside>
               <div className="min-w-0">
@@ -216,7 +216,7 @@ export default function Page() {
         </p>
         <p className="mt-4 max-w-3xl text-sm text-pretty text-muted">
           <span className="font-medium text-fg">When it ships: </span>
-          a pilot with 5 AEs, 2 SEs, and 3 SDRs starts around day 75, once Lockstep has a couple of months of signals and
+          a pilot with 5 AEs, 2 SEs, and 3 SDRs starts around day 75, once Candado has a couple of months of signals and
           references to answer from. Every rep gets it after day 90.{" "}
           <Link href="/plan" className="font-medium text-accent hover:underline">
             See the 90-day plan

@@ -29,7 +29,7 @@ export default function Page() {
       <div className="rounded-xl border border-line bg-surface">
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
           <div>
-            <p className="text-xs text-muted">Lockstep · Weekly digest</p>
+            <p className="text-xs text-muted">Candado · Weekly digest</p>
             <p className="mt-0.5 text-lg font-semibold">
               Week of {formatLongDate(digest.weekOf)} · {thisWeek.length} signals ·{" "}
               <span className="text-bad">{needAction} need action</span>
@@ -116,7 +116,7 @@ export default function Page() {
           <MessageSquareQuote className="size-5 text-accent" aria-hidden />
           Questions for win-loss this month
         </h2>
-        <p className="mt-1 text-sm text-muted">Each one fills a gap Lockstep can&apos;t see from public sources.</p>
+        <p className="mt-1 text-sm text-muted">Each one fills a gap Candado can&apos;t see from public sources.</p>
         <ol className="mt-4 space-y-3">
           {digest.winLossQuestions.map((q, i) => (
             <li key={q.question} className="flex gap-4 rounded-xl border border-line bg-surface p-5">
